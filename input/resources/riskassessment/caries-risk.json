@@ -1,0 +1,27 @@
+{
+	"resourceType": "RiskAssessment",
+	"id": "caries-risk",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-08-12T19:14:39.654+00:00",
+		"source": "#LUXLmGeQDVG4wb1h",
+		"profile": [
+			"http://hl7.org/fhir/us/dentalreferral/StructureDefinition/general-riskassessment"
+		]
+	},
+	"status": "final",
+	"subject": {
+		"reference": "Patient/example-dental"
+	},
+	"encounter": {
+		"reference": "Encounter/Med-visit-1"
+	},
+	"occurrenceDateTime": "2020-02-14T16:04:00Z",
+	"condition": {
+		"reference": "Condition/Caries-risk"
+	},
+	"performer": {
+		"reference": "PractitionerRole/PractitionerRole-M",
+		"display": "Dr. John M, MD"
+	}
+}

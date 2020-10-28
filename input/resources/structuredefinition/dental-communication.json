@@ -1,0 +1,19 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "dental-communication",
+	"meta": {
+		"versionId": "5",
+		"lastUpdated": "2020-08-12T19:14:39.658+00:00",
+		"source": "#HKJRn8teVbcifj5s"
+	},
+	"url": "http://hl7.org/fhir/us/dental-data-exchange/StructureDefinition/dental-communication",
+	"name": "DentalCommunication",
+	"title": "Dental Communication",
+	"status": "active",
+	"fhirVersion": "4.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Communication",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
+	"derivation": "constraint"
+}

@@ -1,0 +1,32 @@
+{
+	"resourceType": "Encounter",
+	"id": "Dental-encounter",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-08-12T19:14:39.662+00:00",
+		"source": "#ZQtOUYSHNWhKcTYY",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+		]
+	},
+	"status": "finished",
+	"class": {
+		"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+		"code": "AMB",
+		"display": "ambulatory"
+	},
+	"type": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "185347001"
+				}
+			],
+			"text": "Encounter for problem (procedure)"
+		}
+	],
+	"subject": {
+		"reference": "Patient/example-dental"
+	}
+}

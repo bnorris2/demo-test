@@ -1,0 +1,48 @@
+{
+	"resourceType": "PractitionerRole",
+	"id": "PractitionerRole-M",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-16T22:05:40.969+00:00",
+		"source": "#oyI29KfFaiyP5gPE",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+		]
+	},
+	"practitioner": {
+		"reference": "Practitioner/practitioner-M",
+		"display": "Dr. John M"
+	},
+	"organization": {
+		"reference": "Organization/GHC-organization",
+		"display": "Good Health Clinic"
+	},
+	"code": [
+		{
+			"coding": [
+				{
+					"system": "http://nucc.org/provider-taxonomy",
+					"code": "207Q00000X",
+					"display": "Family Medicine"
+				}
+			]
+		}
+	],
+	"specialty": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "394814009",
+					"display": "General practice (specialty)"
+				}
+			]
+		}
+	],
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "5555557777"
+		}
+	]
+}

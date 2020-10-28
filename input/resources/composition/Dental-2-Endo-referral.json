@@ -1,0 +1,427 @@
+{
+	"resourceType": "Composition",
+	"id": "Dental-2-Endo-referral",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-07-16T22:05:42.914+00:00",
+		"source": "#amC4or88rWTbXIsO",
+		"profile": [
+			"http://hl7.org/fhir/us/ccda/StructureDefinition/Referral-Note",
+			"http://hl7.org/fhir/us/dentalreferral/StructureDefinition/dental-referralnote"
+		]
+	},
+	"language": "en-US",
+	"identifier": {
+		"system": "urn:ietf:rfc:3986",
+		"value": "http://any.org/1"
+	},
+	"status": "preliminary",
+	"type": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "57133-1",
+				"display": "Referral Note"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/example-dental",
+		"display": "Patient A"
+	},
+	"encounter": {
+		"reference": "Encounter/Dental-encounter"
+	},
+	"date": "2020-03-15T09:10:14Z",
+	"author": [
+		{
+			"reference": "PractitionerRole/PractitionerRole-D",
+			"display": "Dr. John D, MD"
+		}
+	],
+	"title": "Referral Note",
+	"attester": [
+		{
+			"mode": "legal",
+			"time": "2020-03-15T09:10:14Z",
+			"party": {
+				"reference": "PractitionerRole/PractitionerRole-D",
+				"display": "Dr. John D, MD"
+			}
+		}
+	],
+	"custodian": {
+		"reference": "Organization/GOHC-organization",
+		"display": "Good Oral Health Clinic"
+	},
+	"section": [
+		{
+			"title": "Allergies and Intolerances Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "48765-2",
+						"display": "Allergies and adverse reactions Document"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Allergen</b></td><td><b>Code</b></td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td>Penicillin G</td><td>7908</td><td>Skin rash</td><td>mild</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Assessment Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "51848-0",
+						"display": "Evaluation note"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Intraoral findings:  On exam of the right lower quadrant, tooth #30 was sensitive to percussion (lingering for 45 seconds) and to cold (sharp, stops when cold removed). No sensitivity to palpation, Radiographic pain upon biting; with relief upon opening. No evidence of new caries on distal; missing #28, replaced with endo implant; #32 impacted with apparent full boney. One cm swelling present on buccal gingivae around #29 and #30 with sinus tract present #30B. </p><p>Paraoral findings: 2 small, mobile lymph nodes found in right submandibular area.</p><p>Oral Test performed: Electric pulp test was positive for vitality #29 and 31 with #30 non-responsive.  Cold test responsive #30, lingering 15 sec.</p><p>Radiographic results showed #32 full bony impaction, #28 endosteal (root form) implant with full crown restoration, and tooth #30 with small PA lesion mesial root. Radiographic caries lesion #29 distal caries lesion (ADA Caries Classification System moderate caries lesion). Other WNL </p></div>"
+			}
+		},
+		{
+			"title": "Family History Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10157-6",
+						"display": "History of family member diseases Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Family History text</p></div>"
+			}
+		},
+		{
+			"title": "Past Medical History Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "11348-0",
+						"display": "History of Past illness Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>One month ago, pt. reports he had a MOBD amalgam restoration (D2161 #30 MOBD) placed in his right lower first molar (tooth #30) for a fractured tooth - MB cusp lost due to undermining by caries lesion (ADA Caries Classification System advanced caries lesion).</p></div>"
+			}
+		},
+		{
+			"title": "History of Present Illness Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10164-2",
+						"display": "History of Present illness Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient A said the pain started 2 weeks ago and has progressively worsened. </p><p>He noticed sharp, stabbing pain provoked by drinking cold beverages in the past week and lingering pain with biting in the last 2 days. </p><p>He is able to eat regular food but only chews on the left side. </p><p>He takes 400 mg ibuprofen every 8 hours for pain. </p><p>His last doses was 2 hours prior to this visit. </p></div>"
+			}
+		},
+		{
+			"title": "Social History Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "29762-2",
+						"display": "Social history Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Smoking Hx text</p></div>"
+			}
+		},
+		{
+			"title": "Chief Complaint and Reason for Visit Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "46239-0",
+						"display": "Chief complaint+Reason for visit Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pain in lower RQ</p></div>"
+			}
+		},
+		{
+			"title": "General Status Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10210-3",
+						"display": "Physical findings of General status Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>General Status text</p></div>"
+			}
+		},
+		{
+			"title": "Functional Status Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "47420-5",
+						"display": "Functional status assessment note"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Functional status text</p></div>"
+			}
+		},
+		{
+			"title": "Mental Status Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10190-7",
+						"display": "Mental status"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mental Status text</p></div>"
+			}
+		},
+		{
+			"title": "Immunizations Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "11369-6",
+						"display": "History of Immunization Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Immunizations text</p></div>"
+			}
+		},
+		{
+			"title": "Nutrition Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "61144-2",
+						"display": "Diet and nutrition Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nutrition Status text</p></div>"
+			}
+		},
+		{
+			"title": "Reason for Referral Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "42349-1",
+						"display": "Reason for referral (narrative)"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Referral to endodontist for evaluation of #30 and endodontic therapy #30.  Referral includes medications prescribed, diagnosis, prognosis, treatment notes, images, and follow up recommendations to be sent from Dentist to Endodontist</p><p>Suspect irreversible pulpitis with necrotic pulp and periapical pathosis. Tooth is restorable despite possible incomplete fracture DB cusp #30.</p></div>"
+			}
+		},
+		{
+			"title": "Medication Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "10160-0",
+						"display": "History of Medication use Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Proventil HFA 90 mcg/actuat MDI Inhaler</td><td>2 puffs  every two to four hours as needed for wheezing</td><td>20160401</td><td>Active</td><td>asthma</td><td>Generic substitution allowed</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Medical Equipment Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "46264-8",
+						"display": "History of medical device use"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Medical Equipment text</p></div>"
+			}
+		},
+		{
+			"title": "Plan of Treatment Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "18776-5",
+						"display": "Plan of care note"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Planned Activity</b></td><td><b>Period</b></td><td><b>Status</b></td></tr><tr><td>Referral to Endodontist</td><td>2020/04/16</td><td>Completed</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Dental Findings Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "8704-9",
+						"display": "Physical findings of Mouth and Throat and Teeth"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Finding Name</b></td><td><b>Date</b></td><td><b>Author</b></td></tr><tr><td>Patient has plaque building arounds gums on upper right quandrant.</td><td>2020/04/16</td><td>Dr. M</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Problem Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "11450-4",
+						"display": "Problem list - Reported"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Problem Name</b></td><td><b>Type</b></td><td><b>Onset Date</b></td><td><b>Abatement Date</b></td><td><b>Status</b></td></tr><tr><td>#30 pulpal necrosis and periapical pathosis with draining fistula</td><td>Condition</td><td>2019-04-01</td><td>2016-04-14</td><td>Active</td></tr><tr><td>Possible vital pulp remnants remain</td><td>Condition</td><td>2019-04-01</td><td>2016-04-14</td><td>Active</td></tr><tr><td>Dental caries lesion, #29</td><td>Condition</td><td>2019-04-01</td><td>2016-04-14</td><td>Active</td></tr><tr><td>Restored caries lesion</td><td>Condition</td><td>2019-04-01</td><td>2016-04-14</td><td>Active</td></tr><tr><td>Possible DB Cusp Fracture</td><td>Condition</td><td>2019-04-01</td><td>2016-04-14</td><td>Active</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Procedures Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "47519-4",
+						"display": "History of Procedures Document"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Procedure Name</b></td><td><b>Body Site</b></td><td><b>Performer</b></td><td><b>Date Performed</b></td></tr><tr><td>MOBD amalgam restoration noted (in odontogram)</td><td>mouth</td><td>Dr. John Dentist</td><td>20190405</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Results Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "30954-2",
+						"display": "Relevant diagnostic tests/laboratory data Narrative"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Test</b></td><td><b>Result Observation Value</b></td><td><b>Date</b></td></tr><tr><td>PA x-rays; Radiographic imaging</td><td>Radiographic results showed #32 full bony impaction, #28 endosteal (root form) implant with full crown restoration, and tooth #30 with small PA lesion mesial root. Radiographic caries lesion #29 distal caries lesion (ADA Caries Classification System moderate caries lesion). Other WNL</td><td>2020/03/15</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Vital Signs Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "8716-3",
+						"display": "Vital signs"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Blood Pressure</td><td>2020/04/15</td><td>130/86</td></tr><tr><td>Pulse</td><td>2020/04/15</td><td>92</td></tr></table></div>"
+			}
+		},
+		{
+			"title": "Payers Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "48768-6",
+						"display": "Payment sources Document"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Payment sources</p></div>"
+			}
+		},
+		{
+			"title": "Instructions Section",
+			"code": {
+				"coding": [
+					{
+						"system": "http://loinc.org",
+						"code": "69730-0",
+						"display": "Instructions"
+					}
+				]
+			},
+			"text": {
+				"status": "generated",
+				"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Instructions</p></div>"
+			}
+		}
+	]
+}

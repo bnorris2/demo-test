@@ -1,0 +1,26 @@
+{
+	"resourceType": "Medication",
+	"id": "tylenol-dental",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-16T22:05:44.037+00:00",
+		"source": "#iVDPRZ7da2AfV3mW",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+		]
+	},
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Acetaminophen 300 MG / Codeine Phosphate 30 MG [Tylenol with Codeine]</div></div>"
+	},
+	"code": {
+		"coding": [
+			{
+				"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+				"code": "993836",
+				"display": "Acetaminophen 300 MG / Codeine Phosphate 30 MG [Tylenol with Codeine]"
+			}
+		],
+		"text": "Acetaminophen 300 MG / Codeine Phosphate 30 MG [Tylenol with Codeine]"
+	}
+}

@@ -1,0 +1,175 @@
+{
+	"resourceType": "CapabilityStatement",
+	"id": "capabilitystatement-dental",
+	"meta": {
+		"versionId": "17",
+		"lastUpdated": "2020-08-21T19:33:20.144+00:00",
+		"source": "#ik82D29ulVAaLtHr"
+	},
+	"url": "http://hl7.org/fhir/us/dentalreferral/CapabilityStatement/capabilitystatement-dental",
+	"version": "1.0.0",
+	"name": "CapabilityStatementDental",
+	"title": "Capability Statement - Dental",
+	"status": "draft",
+	"experimental": false,
+	"date": "2020-04-27",
+	"description": "This resource defines the expected capabilities for both client and server participating in referral exchanges involving a dental actor (medical/dental and dental/dental). \n\nNote to ballot commenters- we encourage ballot comments, especially from potential implementer systems, regarding Capability Statements.",
+	"kind": "requirements",
+	"instantiates": [
+		"https://hapi4-dev.lantanagroup.com/fhir/CapabilityStatement/capabilitystatement-dental"
+	],
+	"imports": [
+		"https://hapi4-dev.lantanagroup.com/fhir/CapabilityStatement/capabilitystatement-dental"
+	],
+	"software": {
+		"name": "test",
+		"releaseDate": "2020-08-24"
+	},
+	"implementation": {
+		"description": "test"
+	},
+	"fhirVersion": "4.0.1",
+	"format": [
+		"xml",
+		"json"
+	],
+	"implementationGuide": [
+		"https://hapi4-dev.lantanagroup.com/fhir/ImplementationGuide/IHE.PCS"
+	],
+	"rest": [
+		{
+			"mode": "server",
+			"documentation": "Describes which profiles that conforming Dental FHIR servers are expected to be able to read.",
+			"resource": [
+				{
+					"type": "Composition",
+					"profile": "http://hl7.org/fhir/us/dentalreferral/StructureDefinition/dental-referralnote"
+				},
+				{
+					"type": "Composition",
+					"profile": "http://hl7.org/fhir/us/dentalreferral/StructureDefinition/dental-consult"
+				},
+				{
+					"type": "ServiceRequest",
+					"profile": "http://hl7.org/fhir/us/dentalreferral/dental-servicerequest"
+				},
+				{
+					"type": "Patient",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+				},
+				{
+					"type": "Practitioner",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+				},
+				{
+					"type": "PractitionerRole",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+				},
+				{
+					"type": "AllergyIntolerance",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+				},
+				{
+					"type": "Condition",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+				},
+				{
+					"type": "Encounter",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+				},
+				{
+					"type": "Immunization",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+				},
+				{
+					"type": "Medication",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+				},
+				{
+					"type": "MedicationRequest",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+				},
+				{
+					"type": "Organization",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+				},
+				{
+					"type": "Procedure",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+				}
+			],
+			"interaction": [
+				{
+					"code": "batch"
+				}
+			]
+		},
+		{
+			"mode": "client",
+			"documentation": "Describes which profiles that conforming Dental FHIR clients are expected to be able to read.",
+			"resource": [
+				{
+					"type": "Composition",
+					"profile": "http://hl7.org/fhir/us/dentalreferral/StructureDefinition/dental-referralnote"
+				},
+				{
+					"type": "Composition",
+					"profile": "http://hl7.org/fhir/us/dentalreferral/StructureDefinition/dental-consult"
+				},
+				{
+					"type": "ServiceRequest",
+					"profile": "http://hl7.org/fhir/us/dentalreferral/dental-servicerequest"
+				},
+				{
+					"type": "Patient",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+				},
+				{
+					"type": "Practitioner",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+				},
+				{
+					"type": "PractitionerRole",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+				},
+				{
+					"type": "AllergyIntolerance",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+				},
+				{
+					"type": "Condition",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+				},
+				{
+					"type": "Encounter",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+				},
+				{
+					"type": "Immunization",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+				},
+				{
+					"type": "Medication",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+				},
+				{
+					"type": "MedicationRequest",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+				},
+				{
+					"type": "Organization",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+				},
+				{
+					"type": "Procedure",
+					"profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+				}
+			],
+			"interaction": [
+				{
+					"code": "batch"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"resourceType": "Encounter",
+	"id": "Med-visit-1",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-08-12T19:14:39.680+00:00",
+		"source": "#VBSqKesvNBfgWGzN",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+		]
+	},
+	"status": "finished",
+	"class": {
+		"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+		"code": "AMB",
+		"display": "ambulatory"
+	},
+	"type": [
+		{
+			"coding": [
+				{
+					"system": "http://www.ama-assn.org/go/cpt",
+					"code": "99201",
+					"display": "Level 1 New Patient Office Visit"
+				}
+			],
+			"text": "Office Visit"
+		}
+	],
+	"subject": {
+		"reference": "Patient/example-dental"
+	}
+}

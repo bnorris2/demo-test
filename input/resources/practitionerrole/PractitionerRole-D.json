@@ -1,0 +1,48 @@
+{
+	"resourceType": "PractitionerRole",
+	"id": "PractitionerRole-D",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-16T22:05:42.476+00:00",
+		"source": "#pJxvb1vwkanFCFiz",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+		]
+	},
+	"practitioner": {
+		"reference": "Practitioner/practitioner-D",
+		"display": "Dr. John D"
+	},
+	"organization": {
+		"reference": "Organization/GOHC-organization",
+		"display": "Good Oral Health Clinic"
+	},
+	"code": [
+		{
+			"coding": [
+				{
+					"system": "http://nucc.org/provider-taxonomy",
+					"code": "122300000X",
+					"display": "Dentist"
+				}
+			]
+		}
+	],
+	"specialty": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "408444009",
+					"display": "General dental practice"
+				}
+			]
+		}
+	],
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "5555555555"
+		}
+	]
+}

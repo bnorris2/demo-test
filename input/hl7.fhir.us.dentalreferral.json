@@ -1,0 +1,869 @@
+{
+	"id": "hl7.fhir.us.dentalreferral",
+	"meta": {
+		"versionId": "19",
+		"lastUpdated": "2020-10-14T20:17:00.506+00:00",
+		"source": "#45rs23JnDe6WRpE6"
+	},
+	"resourceType": "ImplementationGuide",
+	"contained": [
+		{
+			"id": "B8uBK22Y",
+			"resourceType": "DocumentReference",
+			"type": {
+				"coding": [
+					{
+						"code": "ignore-warnings"
+					}
+				]
+			},
+			"content": [
+				{
+					"attachment": {
+						"contentType": "text/plain",
+						"data": "IyBUaGUgZm9sbG93aW5nIHZhbHVlIHNldHMgYXJlIGV4dGVybmFsIGFuZCBub3Qgc3VwcG9ydGVkIGJ5IHRlcm1pbm9sb2d5IHNlcnZlcgpWYWx1ZVNldCBodHRwczovL3BoaW52YWRzLmNkYy5nb3YvdmFkcy9WaWV3VmFsdWVTZXQuYWN0aW9uP29pZD0yLjE2Ljg0MC4xLjExNDIyMi40LjExLjcxODYgbm90IGZvdW5kIGJ5IHZhbGlkYXRvcgpDb2RlIFN5c3RlbSBVUkkgInVybjpvaWQ6Mi4xNi44NDAuMS4xMTQyMjIuNC4xMS43MTg2IiBpcyB1bmtub3duIHNvIHRoZSBjb2RlIGNhbm5vdCBiZSB2YWxpZGF0ZWQKVmFsdWVTZXQgaHR0cHM6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4xMS4yMC45LjMxIG5vdCBmb3VuZCBieSB2YWxpZGF0b3IKVmFsdWVTZXQgaHR0cHM6Ly9jdHMubmxtLm5paC5nb3YvZmhpci9WYWx1ZVNldC8yLjE2Ljg0MC4xLjExMzg4My4xLjExLjIwLjIuMyBub3QgZm91bmQgYnkgdmFsaWRhdG9yCkVycm9yIGZyb20gc2VydmVyOiBOb3QgaW1wbGVtZW50ZWQKRXJyb3IgZnJvbSBzZXJ2ZXI6IFVuYWJsZSB0byBmaW5kIHZhbHVlIHNldCAiaHR0cDovL2hsNy5vcmcvZmhpci91cy9kZW50YWxyZWZlcnJhbC9WYWx1ZVNldC9vcmFsLWNhdml0eS1hcmVhIgpodHRwczovL2NoYXQuZmhpci5vcmcvI25hcnJvdy9zdHJlYW0vMTc5MjUyLUlHLWNyZWF0aW9uL3RvcGljL211bHRpcGxlLjIwdmFsdWVTZXRzLjIwaW4uMjBhLjIwdmFsdWVTZXQKSU5GT1JNQVRJT046IFNlcnZpY2VSZXF1ZXN0L1Jlc2luLXJlc3RvcmUtZXhhbXBsZTogU2VydmljZVJlcXVlc3QuY29kZS5jb2RpbmdbMF06IENvZGUgU3lzdGVtIFVSSSAiaHR0cHM6Ly9hZGEub3JnL2VuL3B1YmxpY2F0aW9ucy9jZHQiIGlzIHVua25vd24gc28gdGhlIGNvZGUgY2Fubm90IGJlIHZhbGlkYXRlZApJTkZPUk1BVElPTjogUHJvY2VkdXJlL0RlbnRhbC1mbG91cmlkZS10eC1leGFtcGxlOiBQcm9jZWR1cmUuY29kZS5jb2RpbmdbMF06IENvZGUgU3lzdGVtIFVSSSAiaHR0cDovL3d3dy5hbWEtYXNzbi5vcmcvZ28vY2R0IiBpcyB1bmtub3duIHNvIHRoZSBjb2RlIGNhbm5vdCBiZSB2YWxpZGF0ZWQKCiMgS25vd24gSUNELTEwLUNNIGlzc3VlClRoZSBjb2RlIEswOC44OSBpcyBub3QgdmFsaWQgaW4gdGhlIHN5c3RlbSBodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC9pY2QtMTAtY20KVGhlIGNvZGUgSzA2LjggaXMgbm90IHZhbGlkIGluIHRoZSBzeXN0ZW0gaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvaWNkLTEwLWNtClRoZSBjb2RlIEswMi45IGlzIG5vdCB2YWxpZCBpbiB0aGUgc3lzdGVtIGh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2ljZC0xMC1jbQpUaGUgY29kZSBaMDkgaXMgbm90IHZhbGlkIGluIHRoZSBzeXN0ZW0gaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvaWNkLTEwLWNtClRoZSBjb2RlIFQ3OS45WFhBIGlzIG5vdCB2YWxpZCBpbiB0aGUgc3lzdGVtIGh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2ljZC0xMC1jbQpUaGUgY29kZSBNMjYuNjkgaXMgbm90IHZhbGlkIGluIHRoZSBzeXN0ZW0gaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvaWNkLTEwLWNtClRoZSBjb2RlIEswMy4yIGlzIG5vdCB2YWxpZCBpbiB0aGUgc3lzdGVtIGh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2ljZC0xMC1jbQpUaGUgY29kZSBSNjguMiBpcyBub3QgdmFsaWQgaW4gdGhlIHN5c3RlbSBodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC9pY2QtMTAtY20KVGhlIGNvZGUgSzAzLjYgaXMgbm90IHZhbGlkIGluIHRoZSBzeXN0ZW0gaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvaWNkLTEwLWNtClRoZSBjb2RlIEsxMi4yIGlzIG5vdCB2YWxpZCBpbiB0aGUgc3lzdGVtIGh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2ljZC0xMC1jbQpUaGUgY29kZSBFMTMuOSBpcyBub3QgdmFsaWQgaW4gdGhlIHN5c3RlbSBodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC9pY2QtMTAtY20KVGhlIGNvZGUgWjMzLjEgaXMgbm90IHZhbGlkIGluIHRoZSBzeXN0ZW0gaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvaWNkLTEwLWNtClRoZSBjb2RlIEswMC42IGlzIG5vdCB2YWxpZCBpbiB0aGUgc3lzdGVtIGh0dHA6Ly9obDcub3JnL2ZoaXIvc2lkL2ljZC0xMC1jbQpUaGUgY29kZSBNMjYuNCBpcyBub3QgdmFsaWQgaW4gdGhlIHN5c3RlbSBodHRwOi8vaGw3Lm9yZy9maGlyL3NpZC9pY2QtMTAtY20KVGhlIGNvZGUgWjAyLjkgaXMgbm90IHZhbGlkIGluIHRoZSBzeXN0ZW0gaHR0cDovL2hsNy5vcmcvZmhpci9zaWQvaWNkLTEwLWNtCgojIFN1cHByZXNzaW5nIGV4cGVjdGVkIGFkZGl0aW9uYWwgU2VjdGlvbiBzbGljZXMgKGllIHNsaWNpbmcgaW5mb3JtYXRpb24gZm9yIHVuZXhwZWN0ZWQgSW5zdHJ1Y3Rpb25zLCBQYXllcnMsIGV0Yy4pClRoaXMgZWxlbWVudCBkb2VzIG5vdCBtYXRjaCBhbnkga25vd24gc2xpY2UgZGVmaW5lZCBpbiB0aGUgcHJvZmlsZSBodHRwOi8vaGw3Lm9yZy9maGlyL3VzL2NjZGEvU3RydWN0dXJlRGVmaW5pdGlvbi9Db25zdWx0YXRpb24tTm90ZQpUaGlzIGVsZW1lbnQgZG9lcyBub3QgbWF0Y2ggYW55IGtub3duIHNsaWNlIGRlZmluZWQgaW4gdGhlIHByb2ZpbGUgaHR0cDovL2hsNy5vcmcvZmhpci91cy9kZW50YWxyZWZlcnJhbC9TdHJ1Y3R1cmVEZWZpbml0aW9uL2RlbnRhbC1yZWZlcnJhbG5vdGU=",
+						"title": "ignoreWarnings.txt"
+					}
+				}
+			]
+		},
+		{
+			"id": "YDe3QxBp",
+			"resourceType": "DocumentReference",
+			"type": {
+				"coding": [
+					{
+						"code": "jira-spec"
+					}
+				]
+			},
+			"content": [
+				{
+					"attachment": {
+						"contentType": "text/plain",
+						"data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNwZWNpZmljYXRpb24gYmFsbG90VXJsPSJodHRwOi8vaGw3Lm9yZy9maGlyL3JlYWxtL2Zvby92ZXJzaW9uIiBnaXRVcmw9Imh0dHBzOi8vZ2l0aHViLmNvbS9ITDcvZm9vIiB1cmw9Imh0dHA6Ly9obDcub3JnL2ZoaXIvZm9vIiBjaVVybD0iaHR0cDovL2J1aWxkLmZoaXIub3JnL2lnL0hMNy9mb28iIGRlZmF1bHRXb3JrZ3JvdXA9ImZoaXItaSIgZGVmYXVsdFZlcnNpb249IjEuMC4wIgogICAgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOm5vTmFtZXNwYWNlU2NoZW1hTG9jYXRpb249Ii4uL3NjaGVtYXMvc3BlY2lmaWNhdGlvbi54c2QiPgogICAgPHZlcnNpb24gY29kZT0iMC4wLjEiLz4KICAgIDxhcnRpZmFjdFBhZ2VFeHRlbnNpb24gdmFsdWU9Ii1kZWZpbml0aW9ucyIvPgogICAgPGFydGlmYWN0UGFnZUV4dGVuc2lvbiB2YWx1ZT0iLWV4YW1wbGVzIi8+CiAgICA8YXJ0aWZhY3RQYWdlRXh0ZW5zaW9uIHZhbHVlPSItbWFwcGluZ3MiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJEZW50YWwgQ29uc3VsdCBOb3RlIiBrZXk9IlN0cnVjdHVyZURlZmluaXRpb24tZGVudGFsLWNvbnN1bHQiIGlkPSJTdHJ1Y3R1cmVEZWZpbml0aW9uL2RlbnRhbC1jb25zdWx0Ii8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iT3JhbCBDYXZpdHkgQXJlYSBWYWx1ZVNldCIga2V5PSJWYWx1ZVNldC1vcmFsLWNhdml0eS1hcmVhIiBpZD0iVmFsdWVTZXQvb3JhbC1jYXZpdHktYXJlYSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRlbnRhbCBDb21tdW5pY2F0aW9uIFByb2ZpbGUiIGtleT0iU3RydWN0dXJlRGVmaW5pdGlvbi1kZW50YWwtY29tbXVuaWNhdGlvbiIgaWQ9IlN0cnVjdHVyZURlZmluaXRpb24vZGVudGFsLWNvbW11bmljYXRpb24iLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJEZW50YWwgU2VydmljZSBSZXF1ZXN0IFByb2ZpbGUiIGtleT0iU3RydWN0dXJlRGVmaW5pdGlvbi1kZW50YWwtc2VydmljZXJlcXVlc3QiIGlkPSJTdHJ1Y3R1cmVEZWZpbml0aW9uL2RlbnRhbC1zZXJ2aWNlcmVxdWVzdCIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRlbnRhbCBGaW5kaW5ncyBQcm9maWxlIiBrZXk9IlN0cnVjdHVyZURlZmluaXRpb24tZGVudGFsLWZpbmRpbmdzIiBpZD0iU3RydWN0dXJlRGVmaW5pdGlvbi9kZW50YWwtZmluZGluZ3MiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJEZW50YWwgUmVmZXJyYWwgTm90ZSBQcm9maWxlIiBrZXk9IlN0cnVjdHVyZURlZmluaXRpb24tZGVudGFsLXJlZmVycmFsbm90ZSIgaWQ9IlN0cnVjdHVyZURlZmluaXRpb24vZGVudGFsLXJlZmVycmFsbm90ZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRlbnRhbCBPYnNlcnZhdGlvbiBDb2RlcyBWYWx1ZVNldCIga2V5PSJWYWx1ZVNldC1kZW50YWwtb2JzZXJ2YXRpb24tY29kZXMiIGlkPSJWYWx1ZVNldC9kZW50YWwtb2JzZXJ2YXRpb24tY29kZXMiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJBbGxlcmd5IGV4YW1wbGUgKGV4YW1wbGUpIiBrZXk9IkFsbGVyZ3lJbnRvbGVyYW5jZS1BbGxlcmd5LWV4YW1wbGUtZGVudGFsIiBpZD0iQWxsZXJneUludG9sZXJhbmNlL0FsbGVyZ3ktZXhhbXBsZS1kZW50YWwiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJDYXBhYmlsaXR5IFN0YXRlbWVudCAtIERlbnRhbCIga2V5PSJDYXBhYmlsaXR5U3RhdGVtZW50LWNhcGFiaWxpdHlzdGF0ZW1lbnQtZGVudGFsIiBpZD0iQ2FwYWJpbGl0eVN0YXRlbWVudC9jYXBhYmlsaXR5c3RhdGVtZW50LWRlbnRhbCIvPgogICAgPGFydGlmYWN0IG5hbWU9Ik1lZGljYXRpb24xIChleGFtcGxlKSIga2V5PSJNZWRpY2F0aW9uLXR5bGVub2wtZGVudGFsIiBpZD0iTWVkaWNhdGlvbi90eWxlbm9sLWRlbnRhbCIvPgogICAgPGFydGlmYWN0IG5hbWU9Ik1lZGlhdGlvbjIgKGV4YW1wbGUpIiBrZXk9Ik1lZGljYXRpb24taWJ1cHJvZmVuLW1lZC1leGFtcGxlLTIiIGlkPSJNZWRpY2F0aW9uL2lidXByb2Zlbi1tZWQtZXhhbXBsZS0yIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iTWVkaWNhdGlvbjMgKGV4YW1wbGUpIiBrZXk9Ik1lZGljYXRpb24tZXJ5dGhyb215Y2luLW1lZC1leGFtcGxlIiBpZD0iTWVkaWNhdGlvbi9lcnl0aHJvbXljaW4tbWVkLWV4YW1wbGUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJNZWRpY2F0aW9uNCAoZXhhbXBsZSkiIGtleT0iTWVkaWNhdGlvbi1BY2V0YW1pbm9waGVuLW1lZC1leGFtcGxlLTIiIGlkPSJNZWRpY2F0aW9uL0FjZXRhbWlub3BoZW4tbWVkLWV4YW1wbGUtMiIvPgogICAgPGFydGlmYWN0IG5hbWU9Ik1lZGljYXRpb24gU3RhdGVtZW50NCAoZXhhbXBsZSkiIGtleT0iTWVkaWNhdGlvblJlcXVlc3QtQWNldGFtaW5vcGhlbi1tZWRyZXEtMiIgaWQ9Ik1lZGljYXRpb25SZXF1ZXN0L0FjZXRhbWlub3BoZW4tbWVkcmVxLTIiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJNZWRpY2F0aW9uIFN0YXRlbWVudDIgKGV4YW1wbGUpIiBrZXk9Ik1lZGljYXRpb25SZXF1ZXN0LUlidXByb2Zlbi1tZWRyZXEtMiIgaWQ9Ik1lZGljYXRpb25SZXF1ZXN0L0lidXByb2Zlbi1tZWRyZXEtMiIvPgogICAgPGFydGlmYWN0IG5hbWU9Ik1lZGljYXRpb24gU3RhdGVtZW50MSAoZXhhbXBsZSkiIGtleT0iTWVkaWNhdGlvblJlcXVlc3QtVHlsZW5vbC1tZWQtZGVudGFsIiBpZD0iTWVkaWNhdGlvblJlcXVlc3QvVHlsZW5vbC1tZWQtZGVudGFsIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iTWVkaWNhdGlvbiBTdGF0ZW1lbnQzIChleGFtcGxlKSIga2V5PSJNZWRpY2F0aW9uUmVxdWVzdC1lcnl0aHJvbXljaW4tbWVkcmVxLTIiIGlkPSJNZWRpY2F0aW9uUmVxdWVzdC9lcnl0aHJvbXljaW4tbWVkcmVxLTIiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJPY2N1cGF0aW9uIChleGFtcGxlKSIga2V5PSJPYnNlcnZhdGlvbi1QcmVzZW50LWpvYi1leGFtcGxlLWRlbnRhbCIgaWQ9Ik9ic2VydmF0aW9uL1ByZXNlbnQtam9iLWV4YW1wbGUtZGVudGFsIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iU21va2luZyBTdGF0dXMgKGV4YW1wbGUpIiBrZXk9Ik9ic2VydmF0aW9uLVNtb2tlci1vYnMtZXhhbXBsZS1kZW50YWwiIGlkPSJPYnNlcnZhdGlvbi9TbW9rZXItb2JzLWV4YW1wbGUtZGVudGFsIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iRWR1Y2F0aW9uIGxldmVsIChleGFtcGxlKSIga2V5PSJPYnNlcnZhdGlvbi1FZHVjYXRpb24tbGV2ZWwtZXhhbXBsZS1kZW50YWwiIGlkPSJPYnNlcnZhdGlvbi9FZHVjYXRpb24tbGV2ZWwtZXhhbXBsZS1kZW50YWwiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJQYXRpZW50IEEgKGV4YW1wbGUpIiBrZXk9IlBhdGllbnQtZXhhbXBsZS1kZW50YWwiIGlkPSJQYXRpZW50L2V4YW1wbGUtZGVudGFsIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iUHJhY3RpdGlvbmVyIERlbnRpc3QgKGV4YW1wbGUpIiBrZXk9IlByYWN0aXRpb25lci1wcmFjdGl0aW9uZXItRCIgaWQ9IlByYWN0aXRpb25lci9wcmFjdGl0aW9uZXItRCIvPgogICAgPGFydGlmYWN0IG5hbWU9IlByYWN0aXRpb25lciBFbmRvZG9udGlzdCAoZXhhbXBsZSkiIGtleT0iUHJhY3RpdGlvbmVyLXByYWN0aXRpb25lci1FIiBpZD0iUHJhY3RpdGlvbmVyL3ByYWN0aXRpb25lci1FIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iUHJhY3RpdGlvbmVyIE1lZGljYWwgKGV4YW1wbGUpIiBrZXk9IlByYWN0aXRpb25lci1wcmFjdGl0aW9uZXItTSIgaWQ9IlByYWN0aXRpb25lci9wcmFjdGl0aW9uZXItTSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlByYWN0aXRpb25lclJvbGUgTWVkaWNhbCAoZXhhbXBsZSkiIGtleT0iUHJhY3RpdGlvbmVyUm9sZS1QcmFjdGl0aW9uZXJSb2xlLU0iIGlkPSJQcmFjdGl0aW9uZXJSb2xlL1ByYWN0aXRpb25lclJvbGUtTSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlByYWN0aXRpb25lclJvbGUgRGVudGlzdCAoZXhhbXBsZSkiIGtleT0iUHJhY3RpdGlvbmVyUm9sZS1QcmFjdGl0aW9uZXJSb2xlLUQiIGlkPSJQcmFjdGl0aW9uZXJSb2xlL1ByYWN0aXRpb25lclJvbGUtRCIvPgogICAgPGFydGlmYWN0IG5hbWU9IlByYWN0aXRpb25lclJvbGUgRW5kb2RvbnRpc3QgKGV4YW1wbGUpIiBrZXk9IlByYWN0aXRpb25lclJvbGUtUHJhY3RpdGlvbmVyUm9sZS1FIiBpZD0iUHJhY3RpdGlvbmVyUm9sZS9QcmFjdGl0aW9uZXJSb2xlLUUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJGbG91cmlkZSBUcmVhdG1lbnQgKGV4YW1wbGUpIiBrZXk9IlByb2NlZHVyZS1EZW50YWwtZmxvdXJpZGUtdHgtZXhhbXBsZSIgaWQ9IlByb2NlZHVyZS9EZW50YWwtZmxvdXJpZGUtdHgtZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkVuZG9kb250aWMgVGhlcmFweSAoZXhhbXBsZSkiIGtleT0iUHJvY2VkdXJlLUVuZG8tdGhlcmFweS1leGFtcGxlIiBpZD0iUHJvY2VkdXJlL0VuZG8tdGhlcmFweS1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iSW5jaXNvciBSZXN0b3JhdGlvbiAoZXhhbXBsZSkiIGtleT0iUHJvY2VkdXJlLURlbnRhbC1pbmNpc29yLXJlc3RvcmF0aW9uLWV4YW1wbGUiIGlkPSJQcm9jZWR1cmUvRGVudGFsLWluY2lzb3ItcmVzdG9yYXRpb24tZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkV4dHJhY3Rpb24gUHJvY2VkdXJlIChleGFtcGxlKSIga2V5PSJQcm9jZWR1cmUtRGVudGFsLWV4dHJhY3Rpb24tZXhhbXBsZSIgaWQ9IlByb2NlZHVyZS9EZW50YWwtZXh0cmFjdGlvbi1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iRGVudGFsIFJlZmVycmFsIFNlcnZpY2VSZXF1ZXN0IChleGFtcGxlKSIga2V5PSJTZXJ2aWNlUmVxdWVzdC1leGFtcGxlLWRlbnRhbC1yZWZlcnJhbC0xIiBpZD0iU2VydmljZVJlcXVlc3QvZXhhbXBsZS1kZW50YWwtcmVmZXJyYWwtMSIvPgogICAgPGFydGlmYWN0IG5hbWU9Ik1lZGljYWwgdG8gRGVudGFsIFJlZmVycmFsIE5vdGUgKGV4YW1wbGUpIiBrZXk9IkNvbXBvc2l0aW9uLU1lZC0yLURlbnRhbC1SZWZlcnJhbCIgaWQ9IkNvbXBvc2l0aW9uL01lZC0yLURlbnRhbC1SZWZlcnJhbCIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRlbnRhbCBDb25zdWx0YXRpb24gTm90ZSAoZXhhbXBsZSkiIGtleT0iQ29tcG9zaXRpb24tRGVudGFsLTItTWVkLUNvbnN1bHQiIGlkPSJDb21wb3NpdGlvbi9EZW50YWwtMi1NZWQtQ29uc3VsdCIvPgogICAgPGFydGlmYWN0IG5hbWU9IkVuZG8gQ29uc3VsdGF0aW9uIE5vdGUgKGV4YW1wbGUpIiBrZXk9IkNvbXBvc2l0aW9uLUVuZG8tMi1EZW50YWwtQ29uc3VsdCIgaWQ9IkNvbXBvc2l0aW9uL0VuZG8tMi1EZW50YWwtQ29uc3VsdCIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRlbnRhbCBSZWZlcnJhbCBOb3RlIChleGFtcGxlKSIga2V5PSJDb21wb3NpdGlvbi1EZW50YWwtMi1FbmRvLXJlZmVycmFsIiBpZD0iQ29tcG9zaXRpb24vRGVudGFsLTItRW5kby1yZWZlcnJhbCIvPgogICAgPGFydGlmYWN0IG5hbWU9IkVuZG9kb250aXN0IEVuY291bnRlciAoZXhhbXBsZSkiIGtleT0iRW5jb3VudGVyLWVuZG9kb250aXN0LWV4YW1wbGUtMSIgaWQ9IkVuY291bnRlci9lbmRvZG9udGlzdC1leGFtcGxlLTEiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJEZW50YWwgZm9sbG93dXAgLSBwcm9waHlsYXhpcyAoZXhhbXBsZSkiIGtleT0iRW5jb3VudGVyLURlbnRpc3QtZm9sbG93dXAtcHJvcGh5bGF4aXMiIGlkPSJFbmNvdW50ZXIvRGVudGlzdC1mb2xsb3d1cC1wcm9waHlsYXhpcyIvPgogICAgPGFydGlmYWN0IG5hbWU9Ik1lZGljYWwgRW5jb3VudGVyIChleGFtcGxlKSIga2V5PSJFbmNvdW50ZXItTWVkLXZpc2l0LTEiIGlkPSJFbmNvdW50ZXIvTWVkLXZpc2l0LTEiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJEZW50YWwgRW5jb3VudGVyIChleGFtcGxlKSIga2V5PSJFbmNvdW50ZXItRGVudGFsLWVuY291bnRlciIgaWQ9IkVuY291bnRlci9EZW50YWwtZW5jb3VudGVyIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iR29vZCBIZWFsdGggQ2xpbmljIChleGFtcGxlKSIga2V5PSJPcmdhbml6YXRpb24tR0hDLW9yZ2FuaXphdGlvbiIgaWQ9Ik9yZ2FuaXphdGlvbi9HSEMtb3JnYW5pemF0aW9uIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iR29vZCBPcmFsIEhlYWx0aCBDbGluaWMgKGV4YW1wbGUpIiBrZXk9Ik9yZ2FuaXphdGlvbi1HT0hDLW9yZ2FuaXphdGlvbiIgaWQ9Ik9yZ2FuaXphdGlvbi9HT0hDLW9yZ2FuaXphdGlvbiIvPgogICAgPGFydGlmYWN0IG5hbWU9Ikdvb2QgRW5kb2RvbnRpY3MgSGVhbHRoIENsaW5pYyAoZXhhbXBsZSkiIGtleT0iT3JnYW5pemF0aW9uLUdFSEMtb3JnYW5pemF0aW9uIiBpZD0iT3JnYW5pemF0aW9uL0dFSEMtb3JnYW5pemF0aW9uIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iQ292ZXJhZ2UgKGV4YW1wbGUpIiBrZXk9IkNvdmVyYWdlLURlbnRhbC1BZXRuYSIgaWQ9IkNvdmVyYWdlL0RlbnRhbC1BZXRuYSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkFldG5hIEluc3VyYW5jZSAoZXhhbXBsZSkiIGtleT0iT3JnYW5pemF0aW9uLUFldG5hLW9yZ2FuaXphdGlvbiIgaWQ9Ik9yZ2FuaXphdGlvbi9BZXRuYS1vcmdhbml6YXRpb24iLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJFbmRvZG9udGlzdCBSZWZlcnJhbCBTZXJ2aWNlUmVxdWVzdCAoZXhhbXBsZSkiIGtleT0iU2VydmljZVJlcXVlc3QtZXhhbXBsZS1kZW50YWwtcmVmZXJyYWwtMiIgaWQ9IlNlcnZpY2VSZXF1ZXN0L2V4YW1wbGUtZGVudGFsLXJlZmVycmFsLTIiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJQdCBlZHVjYXRpb24gKGV4YW1wbGUpIiBrZXk9IkNvbW11bmljYXRpb24tZGVudGFsLWVkdWNhdGlvbiIgaWQ9IkNvbW11bmljYXRpb24vZGVudGFsLWVkdWNhdGlvbiIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRlbnRhbFVuaXZlcnNhbE51bWJlcmluZ1N5c3RlbSIga2V5PSJWYWx1ZVNldC1kZW50YWwtdW5pdmVyc2FsLW51bWJlcmluZy1zeXN0ZW0iIGlkPSJWYWx1ZVNldC9kZW50YWwtdW5pdmVyc2FsLW51bWJlcmluZy1zeXN0ZW0iLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJEZW50YWwgUmVhc29uIEZvciBSZWZlcnJhbCIga2V5PSJWYWx1ZVNldC1kZW50YWwtcmVhc29uLWZvci1yZWZlcnJhbCIgaWQ9IlZhbHVlU2V0L2RlbnRhbC1yZWFzb24tZm9yLXJlZmVycmFsIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iRGVudGFsIEFuYXRvbXkiIGtleT0iVmFsdWVTZXQtZGVudGFsLWFuYXRvbXkiIGlkPSJWYWx1ZVNldC9kZW50YWwtYW5hdG9teSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlBlcm1hbmVudCBNYW5kaWJ1bGFyIDcgKGV4YW1wbGUpIiBrZXk9IkNvbmRpdGlvbi1NYXhpbGxhcnktcGVybTctZXhhbXBsZSIgaWQ9IkNvbmRpdGlvbi9NYXhpbGxhcnktcGVybTctZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkRpYWJldGVzIChleGFtcGxlKSIga2V5PSJDb25kaXRpb24tRE0xLWV4YW1wbGUiIGlkPSJDb25kaXRpb24vRE0xLWV4YW1wbGUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJMZWZ0IExvd2VyIFF1YWRyYW50IFBhaW4gKGV4YW1wbGUpIiBrZXk9IkNvbmRpdGlvbi1MTFFQLWV4YW1wbGUiIGlkPSJDb25kaXRpb24vTExRUC1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iU3dvbGxlbiBndW1zIChleGFtcGxlKSIga2V5PSJDb25kaXRpb24tU3dvbGxlbi1ndW1zLWV4YW1wbGUiIGlkPSJDb25kaXRpb24vU3dvbGxlbi1ndW1zLWV4YW1wbGUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJQZXJtYW5lbnQgTWFuZGlidWxhciAzMCAoZXhhbXBsZSkiIGtleT0iQ29uZGl0aW9uLU1hbmRpYnVsYXItcGVybTMwLWV4YW1wbGUiIGlkPSJDb25kaXRpb24vTWFuZGlidWxhci1wZXJtMzAtZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9Ikh5cGVydGVuc2lvbiAoZXhhbXBsZSkiIGtleT0iQ29uZGl0aW9uLUhUTi1leGFtcGxlIiBpZD0iQ29uZGl0aW9uL0hUTi1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iUHVscGl0aXMgKGV4YW1wbGUpIiBrZXk9IkNvbmRpdGlvbi1QdWxwaXRpcy1leGFtcGxlLTQiIGlkPSJDb25kaXRpb24vUHVscGl0aXMtZXhhbXBsZS00Ii8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iUGxhcXVlIChleGFtcGxlKSIga2V5PSJDb25kaXRpb24tRGVudGFsLXBsYXF1ZS1leGFtcGxlIiBpZD0iQ29uZGl0aW9uL0RlbnRhbC1wbGFxdWUtZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlRvb3RoZWFjaGUgKGV4YW1wbGUpIiBrZXk9IkNvbmRpdGlvbi10b290aGFjaGUtZXhhbXBsZSIgaWQ9IkNvbmRpdGlvbi90b290aGFjaGUtZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlBlcm1hbmVudCBNYW5kaWJ1bGFyIDE4IChleGFtcGxlKSIga2V5PSJDb25kaXRpb24tTWFuZGlidWxhci1wZXJtMTgtZXhhbXBsZSIgaWQ9IkNvbmRpdGlvbi9NYW5kaWJ1bGFyLXBlcm0xOC1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iQmxlZWRpbmcgZ3VtcyAoZXhhbXBsZSkiIGtleT0iQ29uZGl0aW9uLUJsZWVkaW5nLWd1bXMtZXhhbXBsZSIgaWQ9IkNvbmRpdGlvbi9CbGVlZGluZy1ndW1zLWV4YW1wbGUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJDYXJpZXMgcmlzayAoZXhhbXBsZSkiIGtleT0iQ29uZGl0aW9uLUNhcmllcy1yaXNrIiBpZD0iQ29uZGl0aW9uL0Nhcmllcy1yaXNrIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iUGVyaW9kb250aXRpcyAoZXhhbXBsZSkiIGtleT0iQ29uZGl0aW9uLUNocm9uaWMtcGVyaW9kb250aXRpcy1leGFtcGxlIiBpZD0iQ29uZGl0aW9uL0Nocm9uaWMtcGVyaW9kb250aXRpcy1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iQ2FyaWVzIGNvbmRpdGlvbiAoZXhhbXBsZSkiIGtleT0iQ29uZGl0aW9uLURlbnRhbC1jYXJpZXMtZXhhbXBsZSIgaWQ9IkNvbmRpdGlvbi9EZW50YWwtY2FyaWVzLWV4YW1wbGUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJJbW11bml6YXRpb24gKGV4YW1wbGUpIiBrZXk9IkltbXVuaXphdGlvbi1pbW0tMSIgaWQ9IkltbXVuaXphdGlvbi9pbW0tMSIvPgogICAgPGFydGlmYWN0IG5hbWU9Ikxpc2lucG9yaWwgTWVkaWNhdGlvbiAoZXhhbXBsZSkiIGtleT0iTWVkaWNhdGlvbi1MaXNpbm9wcmlsLW1lZC1leGFtcGxlIiBpZD0iTWVkaWNhdGlvbi9MaXNpbm9wcmlsLW1lZC1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iTGlzaW5vcHJpbCBNZWRpY2F0aW9uUmVxdWVzdCAoZXhhbXBsZSkiIGtleT0iTWVkaWNhdGlvblJlcXVlc3QtTGlzaW5vcHJpbC1tZWRyZXEiIGlkPSJNZWRpY2F0aW9uUmVxdWVzdC9MaXNpbm9wcmlsLW1lZHJlcSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlJlc3BpcmF0b3J5IFJhdGUgKGV4YW1wbGUpIiBrZXk9Ik9ic2VydmF0aW9uLXJlc3BpcmF0b3J5LXJhdGUiIGlkPSJPYnNlcnZhdGlvbi9yZXNwaXJhdG9yeS1yYXRlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iVml0YWwgc2lnbnMgcGFuZWwgKGV4YW1wbGUpIiBrZXk9Ik9ic2VydmF0aW9uLXZpdGFscy1wYW5lbCIgaWQ9Ik9ic2VydmF0aW9uL3ZpdGFscy1wYW5lbCIvPgogICAgPGFydGlmYWN0IG5hbWU9IkJvZHkgdGVtcGVyYXR1cmUgKGV4YW1wbGUpIiBrZXk9Ik9ic2VydmF0aW9uLWJvZHktdGVtcGVyYXR1cmUiIGlkPSJPYnNlcnZhdGlvbi9ib2R5LXRlbXBlcmF0dXJlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iSGVhcnQgcmF0ZSAoZXhhbXBsZSkiIGtleT0iT2JzZXJ2YXRpb24taGVhcnQtcmF0ZSIgaWQ9Ik9ic2VydmF0aW9uL2hlYXJ0LXJhdGUiLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJCbG9vZCBwcmVzc3VyZSAoZXhhbXBsZSkiIGtleT0iT2JzZXJ2YXRpb24tYmxvb2QtcHJlc3N1cmUiIGlkPSJPYnNlcnZhdGlvbi9ibG9vZC1wcmVzc3VyZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IlByYWN0aXRpb25lciB3aXRoIHVua25vd24gbmFtZTIgKGV4YW1wbGUpIiBrZXk9IlByYWN0aXRpb25lci1wcmFjdGl0aW9uZXItVU5LMiIgaWQ9IlByYWN0aXRpb25lci9wcmFjdGl0aW9uZXItVU5LMiIvPgogICAgPGFydGlmYWN0IG5hbWU9IlByYWN0aXRpb25lciB3aXRoIHVua25vd24gbmFtZSAoZXhhbXBsZSkiIGtleT0iUHJhY3RpdGlvbmVyLXByYWN0aXRpb25lci1VTksiIGlkPSJQcmFjdGl0aW9uZXIvcHJhY3RpdGlvbmVyLVVOSyIvPgogICAgPGFydGlmYWN0IG5hbWU9Ikluc3VsaW4gcHVtcCBpbnNlcnRpb24gKGV4YW1wbGUpIiBrZXk9IlByb2NlZHVyZS1JbnN1bGluLXB1bXAtaW5zZXJ0aW9uIiBpZD0iUHJvY2VkdXJlL0luc3VsaW4tcHVtcC1pbnNlcnRpb24iLz4KICAgIDxhcnRpZmFjdCBuYW1lPSJPcmFsIGV2YWx1YXRpb24gKGV4YW1wbGUpIiBrZXk9IlByb2NlZHVyZS1PcmFsLWV2YWwtZXhhbXBsZSIgaWQ9IlByb2NlZHVyZS9PcmFsLWV2YWwtZXhhbXBsZSIvPgogICAgPGFydGlmYWN0IG5hbWU9IkNhcmllcyBSaXNrIEFzc2Vzc21lbnQgKGV4YW1wbGUpIiBrZXk9IlJpc2tBc3Nlc3NtZW50LWNhcmllcy1yaXNrIiBpZD0iUmlza0Fzc2Vzc21lbnQvY2FyaWVzLXJpc2siLz4KICAgIDxhcnRpZmFjdCBrZXk9IlNlcnZpY2VSZXF1ZXN0LURlbnRhbC1leHRyYWN0aW9uLWV4YW1wbGUiIGlkPSJTZXJ2aWNlUmVxdWVzdC9EZW50YWwtZXh0cmFjdGlvbi1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3Qga2V5PSJTZXJ2aWNlUmVxdWVzdC1SYWRpb2dyYXBoLXN1cnZleSIgaWQ9IlNlcnZpY2VSZXF1ZXN0L1JhZGlvZ3JhcGgtc3VydmV5Ii8+CiAgICA8YXJ0aWZhY3Qga2V5PSJDb21tdW5pY2F0aW9uLWRlbnRhbC1lZHVjYXRpb24yIiBpZD0iQ29tbXVuaWNhdGlvbi9kZW50YWwtZWR1Y2F0aW9uMiIvPgogICAgPGFydGlmYWN0IGtleT0iU2VydmljZVJlcXVlc3QtUmVzaW4tcmVzdG9yZS1leGFtcGxlIiBpZD0iU2VydmljZVJlcXVlc3QvUmVzaW4tcmVzdG9yZS1leGFtcGxlIi8+CiAgICA8YXJ0aWZhY3Qga2V5PSJPYnNlcnZhdGlvbi1PdmVyamV0IiBpZD0iT2JzZXJ2YXRpb24vT3ZlcmpldCIvPgogICAgPGFydGlmYWN0IGtleT0iQ29uZGl0aW9uLVRvb3RoLWluZmVjdGlvbiIgaWQ9IkNvbmRpdGlvbi9Ub290aC1pbmZlY3Rpb24iLz4KICAgIDxhcnRpZmFjdCBrZXk9IkNvbmRpdGlvbi1uby1jaGV3IiBpZD0iQ29uZGl0aW9uL25vLWNoZXciLz4KICAgIDxhcnRpZmFjdCBrZXk9IkNvbmRpdGlvbi1EZW50YWwtY2FyaWVzIiBpZD0iQ29uZGl0aW9uL0RlbnRhbC1jYXJpZXMiLz4KICAgIDxhcnRpZmFjdCBrZXk9IkNvbmRpdGlvbi1Ub290aC1pbmZlY3Rpb24xOCIgaWQ9IkNvbmRpdGlvbi9Ub290aC1pbmZlY3Rpb24xOCIvPgogICAgPGFydGlmYWN0IGtleT0iRW5jb3VudGVyLUNvbXAtb3JhbC1ldmFsIiBpZD0iRW5jb3VudGVyL0NvbXAtb3JhbC1ldmFsIi8+CiAgICA8YXJ0aWZhY3Qga2V5PSJCdW5kbGUtTWVkLTItRGVudGFsLXJlZmVycmFsLWJ1bmRsZSIgaWQ9IkJ1bmRsZS9NZWQtMi1EZW50YWwtcmVmZXJyYWwtYnVuZGxlIi8+CiAgICA8YXJ0aWZhY3QgbmFtZT0iVVMgQ29yZSBMYWJvcmF0b3J5IFJlc3VsdCBPYnNlcnZhdGlvbiBQcm9maWxlIiBrZXk9IlN0cnVjdHVyZURlZmluaXRpb24tdXMtY29yZS1vYnNlcnZhdGlvbi1sYWIiIGlkPSJTdHJ1Y3R1cmVEZWZpbml0aW9uL3VzLWNvcmUtb2JzZXJ2YXRpb24tbGFiIi8+CiAgICA8YXJ0aWZhY3Qga2V5PSJBbGxlcmd5SW50b2xlcmFuY2UtQWxsZXJneS1leGFtcGxlLWRlbnRhbC10ZXN0IiBpZD0iQWxsZXJneUludG9sZXJhbmNlL0FsbGVyZ3ktZXhhbXBsZS1kZW50YWwtdGVzdCIvPgogICAgPHBhZ2UgbmFtZT0iSW50cm9kdWN0aW9uIiBrZXk9ImluZGV4Ii8+CiAgICA8cGFnZSBuYW1lPSJTY29wZSIga2V5PSJzY29wZSIvPgogICAgPHBhZ2UgbmFtZT0iRGVwZW5kZW5jaWVzIiBrZXk9ImRlcGVuZGVuY2llcyIvPgogICAgPHBhZ2UgbmFtZT0iRGVudGFsIERhdGEgRXhjaGFuZ2UgUHJvamVjdCBUZWFtIiBrZXk9InRlYW0iLz4KICAgIDxwYWdlIG5hbWU9IlRlc3QtbmV3LXBhZ2UiIGtleT0idGVzdG5ldy1wYWdlIi8+Cjwvc3BlY2lmaWNhdGlvbj4=",
+						"title": "jira-spec.xml"
+					}
+				}
+			]
+		}
+	],
+	"extension": [],
+	"status": "draft",
+	"fhirVersion": [
+		"4.0.1"
+	],
+	"url": "http://hl7.org/fhir/us/dental-data-exchange/ImplementationGuide/hl7.fhir.us.dentalreferral",
+	"version": "0.0.1",
+	"name": "DentalDataExchange",
+	"title": "Dental Referral and Consult",
+	"publisher": "LCG",
+	"contact": [
+		{
+			"name": "HL7 International - Payer/Provider Information Exchange Work Group",
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://www.hl7.org/Special/committees/claims"
+				}
+			]
+		}
+	],
+	"description": "The Dental Data Exchange FHIR Implementation Guide provides guidance for using the HL7 Fast Healthcare Interoperability Resources (FHIR) standard as an exchange format for dental-related information exchange. It is a collection of profiled FHIR resources designed for use in information exchanges supporting the document-based information shared during the referral of a patient to a general and/or specialized dental provider. The goal of this project is to streamline and enhance the efficacy of the exchange of health information between health care systems and community services organizations involved in addressing chronic health conditions by establishing information exchange standards for electronic referrals and referral outcome reporting.\n\nAt a minimum, a document bundle (CCDAonFHIR Referral Note or Consult Note) will be exchanged along with a ServiceRequest, Patient, and associated medical and dental information. This guide specifies how and where these resources are included within the CCDAonFHIR profiles. \n\nFour use cases are used in this guide to represent the various referral patterns related to dental data exchange:\n1. Medical to Dental practitioner Referral note\n2. Dental to Medical practitioner Consult note\n3. General Dentist to Endodontist Referral note\n4. Endodontist to General Dentist Consult note",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US"
+				}
+			],
+			"text": "US"
+		}
+	],
+	"packageId": "hl7.fhir.us.dentalreferral",
+	"dependsOn": [
+		{
+			"uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+			"packageId": "hl7.fhir.us.core",
+			"version": "3.1.0"
+		},
+		{
+			"uri": "http://hl7.org/fhir/us/ccda/ImplementationGuide/hl7.fhir.us.ccda",
+			"packageId": "hl7.fhir.us.ccda",
+			"version": "current"
+		},
+		{
+			"uri": "http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex",
+			"packageId": "hl7.fhir.us.davinci-hrex",
+			"version": "0.1.0"
+		},
+		{
+			"uri": "http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh",
+			"packageId": "hl7.fhir.us.odh",
+			"version": "1.0.0"
+		}
+	],
+	"definition": {
+		"resource": [
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/dental-consult",
+					"display": "DentalConsult"
+				},
+				"name": "Dental Consult Note",
+				"description": "This Profile defines the Dental Consult Note profile. It contains the textual information regarding what was observed and performed by a general dentist or dental specialist in response to a dental referral as well as references to supplemental dental profiles for that referral. This Consult Note is linked to its Referral via the In-Fulfillment-Of extension reference to ServiceRequest. "
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/oral-cavity-area",
+					"display": "Oral Cavity Area"
+				},
+				"name": "Oral Cavity Area ValueSet",
+				"description": "This ValueSet contains codes for standard oral cavity areas of the mouth"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/dental-communication",
+					"display": "DentalCommunication"
+				},
+				"name": "Dental Communication Profile",
+				"description": "This profile is used to convey verbal and written communication and education between providers, patients and other members of the care team."
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/dental-servicerequest",
+					"display": "DentalServiceRequest"
+				},
+				"name": "Dental Service Request Profile",
+				"description": "This profile contains information regarding the dental referral request including a required identifier and a reference to the reason for the referral, if possible. It also includes basic information such as the patient, referring provider, and encounter information that resulted in the referral. "
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/dental-findings",
+					"display": "dental-findings"
+				},
+				"name": "Dental Findings Profile",
+				"description": "This profile is used to convey oral findings including findings of an Odontogram, Peridontal (overall assessment and tooth-specific observations), Intra and Extra Oral Soft Tissue, TMJ, TMD, and Occlusion. Note - findings in this profile often support associated diagnoses (FHIR Conditions). "
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/dental-referralnote",
+					"display": "DentalReferralNote"
+				},
+				"name": "Dental Referral Note Profile",
+				"description": "This Profile defines the Dental Referral Note profile. It contains the textual information regarding a referral to a general dentist or dental specialist as well as references to supplemental dental profiles for the referral"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/dental-observation-codes",
+					"display": "Dental Observation Codes"
+				},
+				"name": "Dental Observation Codes ValueSet",
+				"description": "This ValueSet contains all ICD-9/10, CPT, CDT, LOINC codes, as well as the Clinical Findings (finding) concept from both Snomed and Snodent. "
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "AllergyIntolerance/Allergy-example-dental"
+				},
+				"name": "Allergy example (example)",
+				"description": "This is an example of US Core AllergyIntollerance"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "CapabilityStatement/capabilitystatement-dental",
+					"display": "Capability Statement - Dental"
+				},
+				"name": "Capability Statement - Dental",
+				"description": "Note to ballot commenters- we encourage ballot comments, especially from potential implementer systems, regarding Capability Statements.\n\nThis resource defines the expected capabilities for both client and server participating in referral exchanges involving a dental actor (medical/dental and dental/dental). "
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/tylenol-dental"
+				},
+				"name": "Medication1 (example)",
+				"description": "This is an example of US Core Medication"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/ibuprofen-med-example-2"
+				},
+				"name": "Mediation2 (example)",
+				"description": "This is an example of US Core Medication"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/erythromycin-med-example"
+				},
+				"name": "Medication3 (example)",
+				"description": "This is an example of US Core Medication"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/Acetaminophen-med-example-2"
+				},
+				"name": "Medication4 (example)",
+				"description": "This is an example of US Core Medication"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Acetaminophen-medreq-2"
+				},
+				"name": "Medication Statement4 (example)",
+				"description": "This is an example of US Core MedicationRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Ibuprofen-medreq-2"
+				},
+				"name": "Medication Statement2 (example)",
+				"description": "This is an example of US Core MedicationRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Tylenol-med-dental"
+				},
+				"name": "Medication Statement1 (example)",
+				"description": "This is an example of US Core MedicationRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/erythromycin-medreq-2"
+				},
+				"name": "Medication Statement3 (example)",
+				"description": "This is an example of US Core MedicationRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/Present-job-example-dental"
+				},
+				"name": "Occupation (example)",
+				"description": "This is an example of ODH past or present occupation Observation"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/Smoker-obs-example-dental"
+				},
+				"name": "Smoking Status (example)",
+				"description": "This is an example of smoking status"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/Education-level-example-dental"
+				},
+				"name": "Education level (example)",
+				"description": "This is an example of education level"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Patient/example-dental"
+				},
+				"name": "Patient A (example)",
+				"description": "This is an example of US Core Patient"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-D"
+				},
+				"name": "Practitioner Dentist (example)",
+				"description": "This is an example of US Core Practitioner"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-E"
+				},
+				"name": "Practitioner Endodontist (example)",
+				"description": "This is an example of US Core Practitioner"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-M"
+				},
+				"name": "Practitioner Medical (example)",
+				"description": "This is an example of US Core Practitioner"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "PractitionerRole/PractitionerRole-M"
+				},
+				"name": "PractitionerRole Medical (example)",
+				"description": "This is an example of US Core PractitionerRole"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "PractitionerRole/PractitionerRole-D"
+				},
+				"name": "PractitionerRole Dentist (example)",
+				"description": "This is an example of US Core PractitionerRole"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "PractitionerRole/PractitionerRole-E"
+				},
+				"name": "PractitionerRole Endodontist (example)",
+				"description": "This is an example of US Core PractitionerRole"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Procedure/Dental-flouride-tx-example"
+				},
+				"name": "Flouride Treatment (example)",
+				"description": "This is an example of US Core Procedure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Procedure/Endo-therapy-example"
+				},
+				"name": "Endodontic Therapy (example)",
+				"description": "This is an example of US Core Procedure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Procedure/Dental-incisor-restoration-example"
+				},
+				"name": "Incisor Restoration (example)",
+				"description": "This is an example of US Core Procedure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Procedure/Dental-extraction-example"
+				},
+				"name": "Extraction Procedure (example)",
+				"description": "This is an example of US Core Procedure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/example-dental-referral-1"
+				},
+				"name": "Dental Referral ServiceRequest (example)",
+				"description": "This is an example of ServiceRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Composition/Med-2-Dental-Referral",
+					"display": "Referral Note"
+				},
+				"name": "Medical to Dental Referral Note (example)",
+				"description": "This is an example of Referral Note Composition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Composition/Dental-2-Med-Consult",
+					"display": "Consultation Note"
+				},
+				"name": "Dental Consultation Note (example)",
+				"description": "This is an example of Consult Note Composition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Composition/Endo-2-Dental-Consult",
+					"display": "Consultation Note"
+				},
+				"name": "Endo Consultation Note (example)",
+				"description": "This is an example of Consult Note Composition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Composition/Dental-2-Endo-referral",
+					"display": "Referral Note"
+				},
+				"name": "Dental Referral Note (example)",
+				"description": "This is an example of Referral Note Composition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/endodontist-example-1"
+				},
+				"name": "Endodontist Encounter (example)",
+				"description": "This is an example of US Core Encounter"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/Dentist-followup-prophylaxis"
+				},
+				"name": "Dental followup - prophylaxis (example)",
+				"description": "This is an example of US Core Encounter"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/Med-visit-1"
+				},
+				"name": "Medical Encounter (example)",
+				"description": "This is an example of US Core Encounter"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/Dental-encounter"
+				},
+				"name": "Dental Encounter (example)",
+				"description": "This is an example of US Core Encounter"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/GHC-organization",
+					"display": "Good Health Clinic"
+				},
+				"name": "Good Health Clinic (example)",
+				"description": "This is an example of US Core Organization"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/GOHC-organization",
+					"display": "Good Oral Health Clinic"
+				},
+				"name": "Good Oral Health Clinic (example)",
+				"description": "This is an example of US Core Organization"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/GEHC-organization",
+					"display": "Good Endodontics Health Clinic"
+				},
+				"name": "Good Endodontics Health Clinic (example)",
+				"description": "This is an example of US Core Organization"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Coverage/Dental-Aetna"
+				},
+				"name": "Coverage (example)",
+				"description": "This is an example of Coverage"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Organization/Aetna-organization",
+					"display": "Aetna Insurance"
+				},
+				"name": "Aetna Insurance (example)",
+				"description": "This is an example of US Core Organization"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/example-dental-referral-2"
+				},
+				"name": "Endodontist Referral ServiceRequest (example)",
+				"description": "This is an example of ServiceRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Communication/dental-education"
+				},
+				"name": "Pt education (example)",
+				"description": "This is an example of Communication"
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/dental-universal-numbering-system",
+					"display": "DentalUniversalNumberingSystem"
+				},
+				"name": "DentalUniversalNumberingSystem",
+				"description": "A dental notation system for associating information to a specific tooth, commonly used in the United States."
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/dental-reason-for-referral",
+					"display": "Dental Reason For Referral"
+				},
+				"name": "Dental Reason For Referral",
+				"description": "This ValueSet contains coded prominent reasons for referral between medical and dental care settings. "
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "ValueSet/dental-anatomy",
+					"display": "Dental Anatomy"
+				},
+				"name": "Dental Anatomy",
+				"description": "This is a dental anatomy ValueSet"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Maxillary-perm7-example"
+				},
+				"name": "Permanent Mandibular 7 (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/DM1-example"
+				},
+				"name": "Diabetes (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/LLQP-example"
+				},
+				"name": "Left Lower Quadrant Pain (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Swollen-gums-example"
+				},
+				"name": "Swollen gums (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Mandibular-perm30-example"
+				},
+				"name": "Permanent Mandibular 30 (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/HTN-example"
+				},
+				"name": "Hypertension (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Pulpitis-example-4"
+				},
+				"name": "Pulpitis (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Dental-plaque-example"
+				},
+				"name": "Plaque (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/toothache-example"
+				},
+				"name": "Tootheache (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Mandibular-perm18-example"
+				},
+				"name": "Permanent Mandibular 18 (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Bleeding-gums-example"
+				},
+				"name": "Bleeding gums (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Caries-risk"
+				},
+				"name": "Caries risk (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Chronic-periodontitis-example"
+				},
+				"name": "Periodontitis (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Dental-caries-example"
+				},
+				"name": "Caries condition (example)",
+				"description": "This is an example of US Core Condition"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Immunization/imm-1"
+				},
+				"name": "Immunization (example)",
+				"description": "This is an example of US Core Immunization"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Medication/Lisinopril-med-example"
+				},
+				"name": "Lisinporil Medication (example)",
+				"description": "This is an example of US Core Medication"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "MedicationRequest/Lisinopril-medreq"
+				},
+				"name": "Lisinopril MedicationRequest (example)",
+				"description": "This is an example of US Core MedicationRequest"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/respiratory-rate"
+				},
+				"name": "Respiratory Rate (example)",
+				"description": "This is an example of Respiratory Rate"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/vitals-panel"
+				},
+				"name": "Vital signs panel (example)",
+				"description": "This is an example of US Core Vitals panel"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/body-temperature"
+				},
+				"name": "Body temperature (example)",
+				"description": "This is an example of body temp"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/heart-rate"
+				},
+				"name": "Heart rate (example)",
+				"description": "This is an example of heart rate"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/blood-pressure"
+				},
+				"name": "Blood pressure (example)",
+				"description": "This is an example of blood pressure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-UNK2"
+				},
+				"name": "Practitioner with unknown name2 (example)",
+				"description": "This is an example of US Core Practitioner"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Practitioner/practitioner-UNK"
+				},
+				"name": "Practitioner with unknown name (example)",
+				"description": "This is an example of US Core Practitioner"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Procedure/Insulin-pump-insertion"
+				},
+				"name": "Insulin pump insertion (example)",
+				"description": "This is an example of US Core Procedure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Procedure/Oral-eval-example"
+				},
+				"name": "Oral evaluation (example)",
+				"description": "This is an example of US Core Procedure"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "RiskAssessment/caries-risk"
+				},
+				"name": "Caries Risk Assessment (example)",
+				"description": "This is an example of RiskAssessment"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/Dental-extraction-example"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/Radiograph-survey"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Communication/dental-education2"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "ServiceRequest/Resin-restore-example"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Observation/Overjet"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Tooth-infection"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/no-chew"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Dental-caries"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Condition/Tooth-infection18"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Encounter/Comp-oral-eval"
+				}
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "Bundle/Med-2-Dental-referral-bundle"
+				}
+			},
+			{
+				"exampleBoolean": false,
+				"reference": {
+					"reference": "StructureDefinition/us-core-observation-lab",
+					"display": "US Core Laboratory Result Observation Profile"
+				},
+				"name": "US Core Laboratory Result Observation Profile",
+				"description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results"
+			},
+			{
+				"exampleBoolean": true,
+				"reference": {
+					"reference": "AllergyIntolerance/Allergy-example-dental-test"
+				}
+			}
+		],
+		"page": {
+			"extension": [],
+			"nameUrl": "index.html",
+			"title": "Introduction",
+			"generation": "markdown",
+			"page": [
+				{
+					"extension": [],
+					"nameUrl": "scope.html",
+					"title": "Scope",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "dependencies.html",
+					"title": "Dependencies",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "team.html",
+					"title": "Dental Data Exchange Project Team",
+					"generation": "markdown"
+				},
+				{
+					"extension": [],
+					"nameUrl": "test-new-page.html",
+					"title": "Test-new-page",
+					"generation": "markdown"
+				}
+			]
+		},
+		"parameter": [
+			{
+				"code": "copyrightyear",
+				"value": "2020+"
+			},
+			{
+				"code": "releaselabel",
+				"value": "CI Build"
+			}
+		]
+	}
+}

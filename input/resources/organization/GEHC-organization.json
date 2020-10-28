@@ -1,0 +1,52 @@
+{
+	"resourceType": "Organization",
+	"id": "GEHC-organization",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-08-06T15:33:36.641+00:00",
+		"source": "#X7ISo2KTamcFIwJJ",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+		]
+	},
+	"identifier": [
+		{
+			"system": "http://hl7.org/fhir/sid/us-npi",
+			"value": "9316452725"
+		}
+	],
+	"active": true,
+	"type": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/organization-type",
+					"code": "prov",
+					"display": "Healthcare Provider"
+				}
+			]
+		}
+	],
+	"name": "Good Endodontics Health Clinic",
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "(+1) 303-677-7777"
+		},
+		{
+			"system": "email",
+			"value": "Endo-service@GHclinic.org"
+		}
+	],
+	"address": [
+		{
+			"line": [
+				"9552 W Alameda Ave"
+			],
+			"city": "Lakewood",
+			"state": "CO",
+			"postalCode": "80226",
+			"country": "USA"
+		}
+	]
+}

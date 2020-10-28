@@ -1,0 +1,58 @@
+{
+	"resourceType": "ServiceRequest",
+	"id": "Dental-extraction-example",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-08-06T16:36:20.289+00:00",
+		"source": "#R7Ip8k3Y2p8Z4eWN",
+		"profile": [
+			"http://hl7.org/fhir/us/dental-data-exchange/dental-servicerequest"
+		]
+	},
+	"status": "active",
+	"intent": "plan",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "https://www.ada.org/en/publications/cdt",
+					"code": "387713003",
+					"display": "Surgical procedure"
+				}
+			],
+			"text": "Surgical procedure"
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "D7140",
+				"display": "Extraction, erupted tooth or exposed root (elevation and/or forceps removal)"
+			}
+		],
+		"text": "Extraction, erupted tooth or exposed root (elevation and/or forceps removal)"
+	},
+	"subject": {
+		"reference": "Patient/example-dental"
+	},
+	"requester": {
+		"reference": "Practitioner/practitioner-D"
+	},
+	"bodySite": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "48402004",
+					"display": "Structure of mandibular left second molar tooth"
+				},
+				{
+					"system": "http://www.ada.org/snodent",
+					"code": "161372D",
+					"display": "Structure of mandibular left second molar tooth"
+				}
+			]
+		}
+	]
+}

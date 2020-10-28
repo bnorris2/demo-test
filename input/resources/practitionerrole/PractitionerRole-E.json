@@ -1,0 +1,48 @@
+{
+	"resourceType": "PractitionerRole",
+	"id": "PractitionerRole-E",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-16T22:05:43.943+00:00",
+		"source": "#uu46NSWXkvG7jIRm",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+		]
+	},
+	"practitioner": {
+		"reference": "Practitioner/practitioner-E",
+		"display": "Dr. Endo E"
+	},
+	"organization": {
+		"reference": "Organization/GEHC-organization",
+		"display": "Great Endodontists Health Clinic"
+	},
+	"code": [
+		{
+			"coding": [
+				{
+					"system": "http://nucc.org/provider-taxonomy",
+					"code": "1223E0200X",
+					"display": "Endodontics"
+				}
+			]
+		}
+	],
+	"specialty": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "408441001",
+					"display": "Endodontics - specialty"
+				}
+			]
+		}
+	],
+	"telecom": [
+		{
+			"system": "phone",
+			"value": "5555556666"
+		}
+	]
+}

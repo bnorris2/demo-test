@@ -1,0 +1,13 @@
+{
+	"resourceType": "ValueSet",
+	"id": "dental-anatomy",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2020-08-12T19:14:39.772+00:00",
+		"source": "#JN123PCQQFiYZXVs"
+	},
+	"url": "http://hl7.org/fhir/us/dental-data-exchange/ValueSet/dental-anatomy",
+	"name": "DentalAnatomy",
+	"title": "Dental Anatomy",
+	"status": "draft"
+}

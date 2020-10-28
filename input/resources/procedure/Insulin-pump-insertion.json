@@ -1,0 +1,32 @@
+{
+	"resourceType": "Procedure",
+	"id": "Insulin-pump-insertion",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2020-07-16T22:05:40.888+00:00",
+		"source": "#lg6ELPmu8JbLgwt8",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+		]
+	},
+	"identifier": [
+		{
+			"system": "urn:ietf:rfc:3986",
+			"value": "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"
+		}
+	],
+	"status": "completed",
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "443263006"
+			}
+		],
+		"text": "Insertion of insulin pump (procedure)"
+	},
+	"subject": {
+		"reference": "Patient/example-dental"
+	},
+	"performedDateTime": "2013-11-03"
+}

@@ -1,0 +1,42 @@
+{
+	"resourceType": "Procedure",
+	"id": "Dental-extraction-example",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-16T22:05:42.296+00:00",
+		"source": "#JvAf6T7MUDCO0Eco",
+		"profile": [
+			"http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+		]
+	},
+	"identifier": [
+		{
+			"system": "urn:ietf:rfc:3986",
+			"value": "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"
+		}
+	],
+	"status": "preparation",
+	"code": {
+		"coding": [
+			{
+				"system": "http://www.ama-assn.org/go/cdt",
+				"code": "D7250"
+			}
+		],
+		"text": "Surgical removal of residual roots (cutting procedure)"
+	},
+	"subject": {
+		"reference": "Patient/example-dental"
+	},
+	"performedPeriod": {
+		"start": "2020-05-15T12:55:26-07:00",
+		"end": "2020-05-15T13:25:26-07:00"
+	},
+	"performer": [
+		{
+			"actor": {
+				"reference": "Practitioner/practitioner-D"
+			}
+		}
+	]
+}

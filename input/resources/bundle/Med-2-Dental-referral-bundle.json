@@ -1,0 +1,1907 @@
+{
+	"resourceType": "Bundle",
+	"id": "Med-2-Dental-referral-bundle",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2020-08-06T16:36:22.329+00:00",
+		"source": "#8w8vV1l7JZYiRgTN"
+	},
+	"identifier": {
+		"system": "urn:ietf:rfc:3986",
+		"value": "urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"
+	},
+	"type": "document",
+	"timestamp": "2013-05-28T22:12:21Z",
+	"entry": [
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Composition/Med-2-Dental-Referral",
+			"resource": {
+				"resourceType": "Composition",
+				"id": "Med-2-Dental-Referral",
+				"language": "en-US",
+				"identifier": {
+					"system": "urn:ietf:rfc:3986",
+					"value": "http://any.org/1"
+				},
+				"status": "final",
+				"type": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "57133-1",
+							"display": "Referral Note"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"encounter": {
+					"reference": "Encounter/Med-visit-1",
+					"display": "PCP visit"
+				},
+				"date": "2020-01-14T03:10:14Z",
+				"author": [
+					{
+						"reference": "PractitionerRole/PractitionerRole-M",
+						"display": "Dr. John M, MD"
+					}
+				],
+				"title": "Referral Note",
+				"attester": [
+					{
+						"mode": "legal",
+						"time": "2020-03-14T09:10:14Z",
+						"party": {
+							"reference": "PractitionerRole/PractitionerRole-M",
+							"display": "Dr. John M, MD"
+						}
+					}
+				],
+				"custodian": {
+					"reference": "Organization/GHC-organization",
+					"display": "Good Health Clinic"
+				},
+				"section": [
+					{
+						"title": "Allergies and Intolerances Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "48765-2",
+									"display": "Allergies and adverse reactions Document"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Allergen</b></td><td><b>Code</b></td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td>Penicillin G</td><td>7908</td><td>Skin rash</td><td>mild</td></tr></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "AllergyIntolerance/Allergy-example-dental"
+							}
+						]
+					},
+					{
+						"title": "Medication Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "10160-0",
+									"display": "History of Medication use Narrative"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Medication</b></td><td><b>Directions</b></td><td><b>Start Date</b></td><td><b>Status</b></td><td><b>Indications</b></td><td><b>Fill Instructions</b></td></tr><tr><td>Lisinopril 10 mg tab</td><td>1 tab once/day</td><td/><td>Active</td><td/><td>Generic substitution allowed</td></tr></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "MedicationRequest/Lisinopril-medreq"
+							}
+						]
+					},
+					{
+						"title": "Problem Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "11450-4",
+									"display": "Problem list - Reported"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p> Mild, Hypertension</p><p> Type 1 diabetes</p><p> Teeth covered in plague</p><p> Toothache</p><p> Swollen Gums</p><p> Bleeding Gums</p><p> Chronic periodontitis</p><p> At high risk for dental carries</p></div>"
+						},
+						"entry": [
+							{
+								"reference": "Condition/HTN-example"
+							},
+							{
+								"reference": "Condition/DM1-example"
+							},
+							{
+								"reference": "Condition/Dental-plaque-example"
+							},
+							{
+								"reference": "Condition/toothache-example"
+							},
+							{
+								"reference": "Condition/Swollen-gums-example"
+							},
+							{
+								"reference": "Condition/Bleeding-gums-example"
+							},
+							{
+								"reference": "Condition/Chronic-periodontitis-example"
+							},
+							{
+								"reference": "Condition/Caries-risk"
+							}
+						]
+					},
+					{
+						"title": "Reason for Referral Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "42349-1",
+									"display": "Reason for referral (narrative)"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Toothache</p><p>Left lower quadrant pain</p><p>Bleeding gums</p></div>"
+						},
+						"entry": [
+							{
+								"reference": "ServiceRequest/example-dental-referral-1"
+							}
+						]
+					},
+					{
+						"title": "Plan of Treatment Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "18776-5",
+									"display": "Plan of care note"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>D0150 - Comprehensive Oral Evaluation</p></div>"
+						},
+						"entry": [
+							{
+								"reference": "Encounter/Comp-oral-eval"
+							}
+						]
+					},
+					{
+						"title": "Results Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "30954-2",
+									"display": "Relevant diagnostic tests/laboratory data Narrative"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Results text</p></div>"
+						}
+					},
+					{
+						"title": "Assessment Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "51848-0",
+									"display": "Evaluation note"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Assessment Section text</p></div>"
+						}
+					},
+					{
+						"title": "History of Present Illness Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "10164-2",
+									"display": "History of Present illness Narrative"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The patient has not visited a dentist or received flouride treatments in the past 4 years while away at college</p></div>"
+						}
+					},
+					{
+						"title": "Immunizations Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "11369-6",
+									"display": "History of Immunization Narrative"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"><thead><tr><th>Vaccine</th><th>Date</th><th>Status</th></tr></thead><tbody><tr><td>\n                Hepatitis B vaccine\n              </td><td>January 4, 2020</td><td>Completed</td></tr></tbody></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "Immunization/imm-1"
+							}
+						]
+					},
+					{
+						"title": "Medical Equipment Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "46264-8",
+									"display": "History of medical device use"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"><thead><tr><th>Device Type</th>    <!-- This is the generic name of the device. --><th>Procedure</th><th>Implant Date</th>    <!-- separated out implant date --></tr></thead><tbody><tr><td>Insulin Pump</td><td>Insertion of insulin pump (procedure)</td><td>November 3, 2013</td></tr></tbody></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "Procedure/Insulin-pump-insertion"
+							}
+						]
+					},
+					{
+						"title": "Procedures Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "47519-4",
+									"display": "History of Procedures Document"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No Procedures performed</p></div>"
+						}
+					},
+					{
+						"title": "Social History Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "29762-2",
+									"display": "Social history Narrative"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Social History Element</b></td><td><b>Description</b></td><td><b>Effective Dates</b></td></tr><tr><td>Smoking Status</td><td>NA</td><td>2005/05/01 - 2020/03/28</td></tr><tr><td>Highest Education Received</td><td>Collect Education</td><td>2010/05/01 - 2014/03/28</td></tr><tr><td>Employment</td><td>Full-time accountant</td><td>2015/05/01 - current</td></tr></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "Observation/Smoker-obs-example-dental"
+							},
+							{
+								"reference": "Observation/Education-level-example-dental"
+							},
+							{
+								"reference": "Observation/Present-job-example-dental"
+							}
+						]
+					},
+					{
+						"title": "Vital Signs Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "8716-3",
+									"display": "Vital signs"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Vital Sign</b></td><td><b>Date</b></td><td><b>Value</b></td></tr><tr><td>Temperature</td><td>2020/04/15</td><td>98.5</td></tr><tr><td>Pulse</td><td>2020/04/15</td><td>78</td></tr><tr><td>Respiration</td><td>2020/04/15</td><td>20</td></tr></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "Observation/body-temperature"
+							},
+							{
+								"reference": "Observation/heart-rate"
+							},
+							{
+								"reference": "Observation/respiratory-rate"
+							}
+						]
+					},
+					{
+						"title": "Goals Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "61146-7",
+									"display": "Goals"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No soda/sugary drinks/energy drinks</p><p>Use fluoride toothpaste</p></div>"
+						}
+					},
+					{
+						"title": "Health Concerns Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "75310-3",
+									"display": "Health concerns Document"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Neuropathy due to diabetes mellitus</p></div>"
+						}
+					},
+					{
+						"title": "Instructions Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "69730-0",
+									"display": "Instructions"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pt. Education. Advised to see dentist regularly, brush 2x/day w/ fluoride\n          toothpaste, floss</p></div>"
+						},
+						"entry": [
+							{
+								"reference": "Communication/dental-education"
+							}
+						]
+					},
+					{
+						"title": "Payers Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "48768-6",
+									"display": "Payment sources Document"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Aetna Comprehensive Medical /Dental Insurance</p></div>"
+						},
+						"entry": [
+							{
+								"reference": "Coverage/Dental-Aetna"
+							}
+						]
+					},
+					{
+						"title": "Dental Findings Section",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "8704-9",
+									"display": "Physical findings of Mouth and Throat and Teeth"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>No Information</p></div>"
+						}
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Patient/example-dental",
+			"resource": {
+				"resourceType": "Patient",
+				"id": "example-dental",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Patient <b>A </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>5152020</td></tr><tr><td>Address</td><td><span>123 Test Dr. </span><br/><span>Denver </span><span>CO </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>01 January 1990</span></td></tr></tbody></table></div>"
+				},
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+						"extension": [
+							{
+								"url": "ombCategory",
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "2106-3",
+									"display": "White"
+								}
+							},
+							{
+								"url": "detailed",
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "1516-4",
+									"display": "Zuni"
+								}
+							},
+							{
+								"url": "text",
+								"valueString": "Mixed"
+							}
+						]
+					},
+					{
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+						"extension": [
+							{
+								"url": "ombCategory",
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "2135-2",
+									"display": "Hispanic or Latino"
+								}
+							},
+							{
+								"url": "text",
+								"valueString": "Hispanic or Latino"
+							}
+						]
+					},
+					{
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+						"valueCode": "M"
+					}
+				],
+				"identifier": [
+					{
+						"use": "usual",
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+									"code": "MR",
+									"display": "Medical Record Number"
+								}
+							],
+							"text": "Medical Record Number"
+						},
+						"system": "http://clinic.goodhealth.org",
+						"value": "5152020"
+					}
+				],
+				"active": true,
+				"name": [
+					{
+						"family": "A",
+						"given": [
+							"Patient"
+						]
+					}
+				],
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "123-456-7890",
+						"use": "home"
+					},
+					{
+						"system": "email",
+						"value": "testA@email.com"
+					}
+				],
+				"gender": "male",
+				"birthDate": "1990-01-01",
+				"address": [
+					{
+						"line": [
+							"123 Test Dr."
+						],
+						"city": "Denver",
+						"state": "CO",
+						"postalCode": "80204",
+						"country": "US"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Encounter/Med-visit-1",
+			"resource": {
+				"resourceType": "Encounter",
+				"id": "Med-visit-1",
+				"status": "finished",
+				"class": {
+					"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+					"code": "AMB",
+					"display": "ambulatory"
+				},
+				"type": [
+					{
+						"coding": [
+							{
+								"system": "http://www.ama-assn.org/go/cpt",
+								"code": "99201",
+								"display": "Level 1 New Patient Office Visit"
+							}
+						],
+						"text": "Office Visit"
+					}
+				],
+				"priority": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+							"code": "R",
+							"display": "routine"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"period": {
+					"start": "2020-02-14T15:00:14-05:00",
+					"end": "2020-02-14T15:30:14-05:00"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/PractitionerRole/PractitionerRole-M",
+			"resource": {
+				"resourceType": "PractitionerRole",
+				"id": "PractitionerRole-M",
+				"practitioner": {
+					"reference": "Practitioner/practitioner-M",
+					"display": "Dr. John M"
+				},
+				"organization": {
+					"reference": "Organization/GHC-organization",
+					"display": "Good Health Clinic"
+				},
+				"code": [
+					{
+						"coding": [
+							{
+								"system": "http://nucc.org/provider-taxonomy",
+								"code": "207Q00000X",
+								"display": "Family Medicine"
+							}
+						]
+					}
+				],
+				"specialty": [
+					{
+						"coding": [
+							{
+								"system": "http://snomed.info/sct",
+								"code": "394814009",
+								"display": "General practice (specialty)"
+							}
+						]
+					}
+				],
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "5555557777"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Practitioner/practitioner-M",
+			"resource": {
+				"resourceType": "Practitioner",
+				"id": "practitioner-M",
+				"identifier": [
+					{
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "1234569999"
+					}
+				],
+				"name": [
+					{
+						"family": "M",
+						"given": [
+							"John"
+						],
+						"prefix": [
+							"Dr"
+						]
+					}
+				],
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "303-303-6443",
+						"use": "work"
+					}
+				],
+				"gender": "male",
+				"birthDate": "1975-06-09"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Organization/GHC-organization",
+			"resource": {
+				"resourceType": "Organization",
+				"id": "GHC-organization",
+				"identifier": [
+					{
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "1316452725"
+					}
+				],
+				"active": true,
+				"type": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/organization-type",
+								"code": "prov",
+								"display": "Healthcare Provider"
+							}
+						]
+					}
+				],
+				"name": "Good Health Clinic",
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "(+1) 555-677-7777"
+					},
+					{
+						"system": "email",
+						"value": "customer-service@GHclinic.org"
+					}
+				],
+				"address": [
+					{
+						"line": [
+							"7551 W Alameda Ave"
+						],
+						"city": "Lakewood",
+						"state": "CO",
+						"postalCode": "80226",
+						"country": "USA"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/AllergyIntolerance/Allergy-example-dental",
+			"resource": {
+				"resourceType": "AllergyIntolerance",
+				"id": "Allergy-example-dental",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+							"code": "active"
+						}
+					]
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+							"code": "confirmed"
+						}
+					]
+				},
+				"category": [
+					"medication"
+				],
+				"criticality": "high",
+				"code": {
+					"coding": [
+						{
+							"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+							"code": "7980",
+							"display": "Penicillin G"
+						}
+					],
+					"text": "Penicillin G (Ingredient)"
+				},
+				"patient": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "1998-05-01"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/MedicationRequest/Lisinopril-medreq",
+			"resource": {
+				"resourceType": "MedicationRequest",
+				"id": "Lisinopril-medreq",
+				"status": "completed",
+				"intent": "plan",
+				"medicationReference": {
+					"reference": "Medication/Lisinopril-med-example"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"authoredOn": "2020-02-14",
+				"requester": {
+					"reference": "Practitioner/practitioner-M",
+					"display": "Dr. John M, MD"
+				},
+				"reasonReference": [
+					{
+						"reference": "Condition/HTN-example"
+					}
+				],
+				"dosageInstruction": [
+					{
+						"text": "Take 1 tab once a day",
+						"timing": {
+							"repeat": {
+								"boundsPeriod": {
+									"start": "2020-01-03"
+								}
+							}
+						},
+						"route": {
+							"coding": [
+								{
+									"system": "http://snomed.info/sct",
+									"code": "26643006",
+									"display": "Oral use"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Medication/Lisinopril-med-example",
+			"resource": {
+				"resourceType": "Medication",
+				"id": "Lisinopril-med-example",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Lisinopril 10 mg tab</div></div>"
+				},
+				"code": {
+					"coding": [
+						{
+							"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+							"code": "314076",
+							"display": "Lisinopril 10 mg Oral Tablet"
+						}
+					],
+					"text": "Lisinopril 10 mg Oral Tablet"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/HTN-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "HTN-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "38341003",
+							"display": "High blood pressure"
+						},
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "175027D",
+							"display": "High blood pressure"
+						}
+					],
+					"text": "Hypertensive disorder (disorder)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2013-07-06",
+				"asserter": {
+					"reference": "Practitioner/practitioner-UNK"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Practitioner/practitioner-UNK",
+			"resource": {
+				"resourceType": "Practitioner",
+				"id": "practitioner-UNK",
+				"identifier": [
+					{
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "555555555"
+					}
+				],
+				"name": [
+					{
+						"family": "UNK",
+						"_family": {
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+									"valueCode": "unknown"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/DM1-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "DM1-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "46635009",
+							"display": "Diabetes mellitus type I"
+						},
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "175321D",
+							"display": "Diabetes mellitus type I"
+						}
+					],
+					"text": "Diabetes mellitus type I"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2013-07-06",
+				"asserter": {
+					"reference": "Practitioner/practitioner-UNK"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/Dental-plaque-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "Dental-plaque-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "276453000",
+							"display": "Teeth covered in plaque (finding)"
+						},
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "108723D",
+							"display": "Teeth covered in plaque (finding)"
+						}
+					],
+					"text": "Teeth covered in plaque (finding)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2013-07-06",
+				"asserter": {
+					"reference": "Practitioner/practitioner-UNK"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/toothache-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "toothache-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "27355003",
+							"display": "Toothache (finding)"
+						},
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "131687D",
+							"display": "Toothache (finding)"
+						}
+					],
+					"text": "Toothache (finding)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2020-02-14"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/Swollen-gums-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "Swollen-gums-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem List"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "148393D",
+							"display": "Swollen gums (finding)"
+						},
+						{
+							"system": "http://snomed.info/sct",
+							"code": "309685001",
+							"display": "Swollen gums (finding)"
+						}
+					],
+					"text": "Swollen gums (finding)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2020-02-14"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/Bleeding-gums-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "Bleeding-gums-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem List"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "148393D",
+							"display": "Bleeding gums"
+						},
+						{
+							"system": "http://snomed.info/sct",
+							"code": "86276007",
+							"display": "Bleeding gums"
+						}
+					],
+					"text": "Bleeding gums"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2020-02-14"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/Chronic-periodontitis-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "Chronic-periodontitis-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "116957D",
+							"display": "Chronic periodontitis (disorder)"
+						},
+						{
+							"system": "http://snomed.info/sct",
+							"code": "5689008",
+							"display": "Chronic periodontitis (disorder)"
+						}
+					],
+					"text": "Chronic periodontitis (disorder)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2020-02-14"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/Caries-risk",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "Caries-risk",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "problem-list-item",
+								"display": "Problem List Item"
+							}
+						],
+						"text": "Problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://www.ada.org/snodent",
+							"code": "179051D",
+							"display": "At high risk for dental caries (finding)"
+						},
+						{
+							"system": "http://snomed.info/sct",
+							"code": "609402003",
+							"display": "At high risk for dental caries (finding)"
+						}
+					],
+					"text": "At high risk for dental caries (finding)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"onsetDateTime": "2020-02-14"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/ServiceRequest/example-dental-referral-1",
+			"resource": {
+				"resourceType": "ServiceRequest",
+				"id": "example-dental-referral-1",
+				"status": "active",
+				"intent": "plan",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://snomed.info/sct",
+								"code": "14736009",
+								"display": "History and physical examination with evaluation and management of patient (procedure)"
+							}
+						],
+						"text": "Evaluation and management of patient (procedure)"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "103697008",
+							"display": "Patient referral for dental care (procedure)"
+						}
+					],
+					"text": "Patient referral for dental care (procedure)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"requester": {
+					"reference": "Practitioner/practitioner-M"
+				},
+				"reasonReference": [
+					{
+						"reference": "Condition/toothache-example"
+					},
+					{
+						"reference": "Condition/LLQP-example"
+					},
+					{
+						"reference": "Condition/Bleeding-gums-example"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Condition/LLQP-example",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "LLQP-example",
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active",
+							"display": "Active"
+						}
+					],
+					"text": "Active"
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+								"code": "health-concern",
+								"display": "Health Concern"
+							}
+						],
+						"text": "Health Concern problem"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "301716002",
+							"display": "Left lower quadrant pain"
+						}
+					],
+					"text": "Left lower quadrant pain"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Encounter/Comp-oral-eval",
+			"resource": {
+				"resourceType": "Encounter",
+				"id": "Comp-oral-eval",
+				"status": "planned",
+				"class": {
+					"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+					"code": "AMB",
+					"display": "ambulatory"
+				},
+				"type": [
+					{
+						"coding": [
+							{
+								"system": "https://www.ada.org/en/publications/cdt",
+								"code": "D0150"
+							}
+						],
+						"text": "Comprehensive Oral Evaluation"
+					}
+				],
+				"priority": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+							"code": "R",
+							"display": "routine"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"period": {
+					"start": "2020-03-10T15:00:14-05:00",
+					"end": "2020-03-10T15:30:14-05:00"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Immunization/imm-1l",
+			"resource": {
+				"resourceType": "Immunization",
+				"id": "imm-1",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"1\" width=\"100%\"><thead><tr><th>Vaccine</th><th>Date</th><th>Status</th></tr></thead><tbody><tr><td>\n                    Hepatitis B vaccine\n                  </td><td>January 4, 2020</td><td>Completed</td></tr></tbody></table></div>"
+				},
+				"status": "completed",
+				"vaccineCode": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/sid/cvx",
+							"code": "08",
+							"display": "Hep B, adolescent or pediatric"
+						}
+					]
+				},
+				"patient": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"occurrenceDateTime": "2020-01-04",
+				"primarySource": false
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Procedure/Insulin-pump-insertion",
+			"resource": {
+				"resourceType": "Procedure",
+				"id": "Insulin-pump-insertion",
+				"identifier": [
+					{
+						"system": "urn:ietf:rfc:3986",
+						"value": "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"
+					}
+				],
+				"status": "completed",
+				"code": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "443263006"
+						}
+					],
+					"text": "Insertion of insulin pump (procedure)"
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"performedDateTime": "2013-11-03"
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Observation/Smoker-obs-example-dental",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "Smoker-obs-example-dental",
+				"status": "final",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+								"code": "social-history",
+								"display": "Social History"
+							}
+						],
+						"text": "Social History"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "72166-2",
+							"display": "Tobacco smoking status"
+						}
+					],
+					"text": "Tobacco smoking status"
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"issued": "2020-01-15T05:27:04Z",
+				"valueCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "266919005",
+							"display": "Never smoked tobacco (finding)"
+						}
+					],
+					"text": "Never smoked tobacco (finding)"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Observation/Education-level-example-dental",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "Education-level-example-dental",
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "82589-3",
+							"display": "Highest Level of Education"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"effectivePeriod": {
+					"start": "2012-01-01",
+					"end": "2016-01-01"
+				},
+				"valueCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "224302000",
+							"display": "Received higher education college education (finding)"
+						}
+					]
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Observation/Present-job-example-dental",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "Present-job-example-dental",
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "11341-5",
+							"display": "History of Occupation"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/example-dental",
+					"display": "Patient A"
+				},
+				"effectivePeriod": {
+					"start": "2015-01-01"
+				},
+				"valueCodeableConcept": {
+					"coding": [
+						{
+							"system": "urn:oid:2.16.840.1.114222.4.11.7186",
+							"code": "0800",
+							"display": "Accountants and Auditors"
+						}
+					]
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Observation/body-temperature",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "body-temperature",
+				"status": "final",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+								"code": "vital-signs",
+								"display": "Vital Signs"
+							}
+						],
+						"text": "Vital Signs"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "8310-5",
+							"display": "Body temperature"
+						}
+					],
+					"text": "Body temperature"
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"effectiveDateTime": "2020-02-14",
+				"valueQuantity": {
+					"value": 36.9,
+					"unit": "C",
+					"system": "http://unitsofmeasure.org",
+					"code": "Cel"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Observation/heart-rate",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "heart-rate",
+				"status": "final",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+								"code": "vital-signs",
+								"display": "Vital Signs"
+							}
+						],
+						"text": "Vital Signs"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "8867-4",
+							"display": "Heart rate"
+						}
+					],
+					"text": "Heart rate"
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"effectiveDateTime": "1999-07-02",
+				"valueQuantity": {
+					"value": 78,
+					"unit": "beats/minute",
+					"system": "http://unitsofmeasure.org",
+					"code": "/min"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Observation/respiratory-rate",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "respiratory-rate",
+				"status": "final",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+								"code": "vital-signs",
+								"display": "Vital Signs"
+							}
+						],
+						"text": "Vital Signs"
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "9279-1",
+							"display": "Respiratory rate"
+						}
+					],
+					"text": "Respiratory rate"
+				},
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"effectiveDateTime": "2020-02-14",
+				"valueQuantity": {
+					"value": 20,
+					"unit": "breaths/minute",
+					"system": "http://unitsofmeasure.org",
+					"code": "/min"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Communication/dental-education",
+			"resource": {
+				"resourceType": "Communication",
+				"id": "dental-education",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient education\n            \n            \n          </div>"
+				},
+				"status": "completed",
+				"subject": {
+					"reference": "Patient/example-dental"
+				},
+				"encounter": {
+					"reference": "Encounter/Med-visit-1"
+				},
+				"sent": "2020-02-14T18:01:10-08:00",
+				"received": "2020-01-12T18:01:11-08:00",
+				"recipient": [
+					{
+						"reference": "Patient/example-dental"
+					}
+				],
+				"sender": {
+					"reference": "Practitioner/practitioner-M"
+				},
+				"payload": [
+					{
+						"contentString": "Pt. Education. Advised to see dentist regularly, brush 2x/day w/ fluoride toothpaste, floss"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Coverage/Dental-Aetna",
+			"resource": {
+				"resourceType": "Coverage",
+				"id": "Dental-Aetna",
+				"identifier": [
+					{
+						"system": "http://benefitsAetna.com/certificate",
+						"value": "12345"
+					}
+				],
+				"status": "active",
+				"type": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+							"code": "DENTAL",
+							"display": "dental care policy"
+						}
+					]
+				},
+				"subscriber": {
+					"reference": "Patient/example-dental"
+				},
+				"subscriberId": "123456",
+				"beneficiary": {
+					"reference": "Patient/example-dental"
+				},
+				"dependent": "0",
+				"relationship": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+							"code": "self",
+							"display": "Self"
+						}
+					]
+				},
+				"period": {
+					"start": "2020-01-01",
+					"end": "2020-01-01"
+				},
+				"payor": [
+					{
+						"reference": "Organization/Aetna-organization"
+					}
+				],
+				"class": [
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+									"code": "plan"
+								}
+							]
+						},
+						"value": "B37FC",
+						"name": "Aetna Full Coverage: Medical, Dental, Pharmacy, Vision, EHC"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://hl7.org/fhir/us/dental-data-exchange/Organization/Aetna-organization",
+			"resource": {
+				"resourceType": "Organization",
+				"id": "Aetna-organization",
+				"identifier": [
+					{
+						"system": "http://hl7.org/fhir/sid/us-npi",
+						"value": "9316452725"
+					}
+				],
+				"active": true,
+				"type": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/organization-type",
+								"code": "pay",
+								"display": "Payer"
+							}
+						]
+					}
+				],
+				"name": "Aetna Insurance",
+				"telecom": [
+					{
+						"system": "phone",
+						"value": "(+1) 720-677-7777"
+					},
+					{
+						"system": "email",
+						"value": "customer2-service@Aetna.org"
+					}
+				],
+				"address": [
+					{
+						"line": [
+							"7555 W Alameda Ave"
+						],
+						"city": "Lakewood",
+						"state": "CO",
+						"postalCode": "80226",
+						"country": "USA"
+					}
+				]
+			}
+		}
+	]
+}

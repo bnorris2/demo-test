@@ -1,0 +1,42 @@
+{
+	"resourceType": "ServiceRequest",
+	"id": "example-dental-referral-2",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2020-07-16T22:05:41.855+00:00",
+		"source": "#ZDajcZagK7RTY8zE",
+		"profile": [
+			"http://hl7.org/fhir/us/dentalreferral/dental-servicerequest"
+		]
+	},
+	"status": "active",
+	"intent": "plan",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://snomed.info/sct",
+					"code": "14736009",
+					"display": "History and physical examination with evaluation and management of patient (procedure)"
+				}
+			],
+			"text": "Evaluation and management of patient (procedure)"
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "103697008",
+				"display": "Patient referral for dental care (procedure)"
+			}
+		],
+		"text": "Patient referral for dental care (procedure)"
+	},
+	"subject": {
+		"reference": "Patient/example-dental"
+	},
+	"requester": {
+		"reference": "Practitioner/practitioner-D"
+	}
+}
